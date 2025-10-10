@@ -9,6 +9,7 @@ interface AuthContextValue {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
+  socialLogin: (email: string) => void;
   logout: () => void;
 }
 
@@ -50,6 +51,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser({ email });
   };
 
+  const socialLogin = (email: string) => {
+    localStorage.setItem(STORAGE_KEY, "mock_oauth");
+    localStorage.setItem(STORAGE_EMAIL, email);
+    setUser({ email });
+  };
+
   const logout = async () => {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(STORAGE_EMAIL);
@@ -58,7 +65,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(null);
   };
 
-  const value = useMemo(() => ({ user, loading, login, logout }), [user, loading]);
+  const value = useMemo(() => ({ user, loading, login, socialLogin, logout }), [user, loading]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
