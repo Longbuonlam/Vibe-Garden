@@ -15,8 +15,13 @@ export default function Index() {
       {/* Product Grid */}
       <section className="container py-16 md:py-24">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Featured Bouquets</h2>
-          <a href="/shop" className="text-primary text-sm md:text-base hover:underline">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+            Featured Bouquets
+          </h2>
+          <a
+            href="/shop"
+            className="text-primary text-sm md:text-base hover:underline"
+          >
             View all
           </a>
         </div>
@@ -34,9 +39,14 @@ export default function Index() {
             <Flower2 className="h-6 w-6 text-accent-foreground" />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold tracking-tight">Our Promise</h3>
+            <h3 className="text-2xl font-semibold tracking-tight">
+              Our Promise
+            </h3>
             <p className="mt-4 max-w-3xl text-muted-foreground">
-              At Petal & Stem, we craft minimal, elegant arrangements using the freshest seasonal blooms. Our mission is to make sending flowers effortless and meaningful—bringing joy, warmth, and a touch of nature to everyday moments.
+              At Petal & Stem, we craft minimal, elegant arrangements using the
+              freshest seasonal blooms. Our mission is to make sending flowers
+              effortless and meaningful—bringing joy, warmth, and a touch of
+              nature to everyday moments.
             </p>
           </div>
         </div>
@@ -46,9 +56,12 @@ export default function Index() {
       <section className="container py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-2xl font-semibold tracking-tight">Get in Touch</h3>
+            <h3 className="text-2xl font-semibold tracking-tight">
+              Get in Touch
+            </h3>
             <p className="mt-2 text-muted-foreground">
-              Questions or custom orders? Send us a message and we’ll get right back to you.
+              Questions or custom orders? Send us a message and we’ll get right
+              back to you.
             </p>
             <form
               className="mt-8 grid grid-cols-1 gap-4"
@@ -58,10 +71,27 @@ export default function Index() {
               }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input name="name" placeholder="Name" required aria-label="Name" />
-                <Input name="email" type="email" placeholder="Email" required aria-label="Email" />
+                <Input
+                  name="name"
+                  placeholder="Name"
+                  required
+                  aria-label="Name"
+                />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                  aria-label="Email"
+                />
               </div>
-              <Textarea name="message" placeholder="Message" required aria-label="Message" rows={6} />
+              <Textarea
+                name="message"
+                placeholder="Message"
+                required
+                aria-label="Message"
+                rows={6}
+              />
               <div>
                 <Button type="submit">Send Message</Button>
               </div>

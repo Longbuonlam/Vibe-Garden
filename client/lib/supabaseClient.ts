@@ -12,6 +12,9 @@ export async function oauthSignIn(provider: "google" | "facebook") {
   const supabase = getSupabase();
   if (!supabase) throw new Error("Supabase not configured");
   const redirectTo = window.location.origin + "/";
-  const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo } });
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider,
+    options: { redirectTo },
+  });
   if (error) throw error;
 }
