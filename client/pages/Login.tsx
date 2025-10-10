@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "sonner";
 import { oauthSignIn, getSupabase } from "@/lib/supabaseClient";
 import { Facebook } from "lucide-react";
+import { useAuth } from "@/auth/AuthContext";
 
 function GoogleIcon() {
   return (
@@ -16,12 +17,17 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation() as any;
   const from = location.state?.from?.pathname || "/";
+  const { socialLogin } = useAuth();
 
   const onProvider = async (provider: "google" | "facebook") => {
     try {
       const supa = getSupabase();
       if (!supa) {
-        toast.error("Connect Supabase and set VITE_SUPABASE_URL/VITE_SUPABASE_ANON_KEY");
+        // Mock OAuth locally for now
+        const email = provider === "google" ? "user.google@example.com" : "user.facebook@example.com";
+        socialLogin(email);
+        toast.success(`Signed in with ${provider}`);
+        navigate(from, { replace: true });
         return;
       }
       await oauthSignIn(provider);
