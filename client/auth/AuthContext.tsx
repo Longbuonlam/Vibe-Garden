@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { getSupabase } from "@/lib/supabaseClient";
 
 interface User {
   email: string;
@@ -20,26 +21,40 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem(STORAGE_KEY);
-    const email = localStorage.getItem(STORAGE_EMAIL);
-    if (token && email) {
-      setUser({ email });
-    }
-    setLoading(false);
+    const bootstrap = async () => {
+      // Fallback: local token (legacy/simple auth)
+      const token = localStorage.getItem(STORAGE_KEY);
+      const email = localStorage.getItem(STORAGE_EMAIL);
+      if (token && email) setUser({ email });
+
+      // Supabase session (preferred)
+      const supa = getSupabase();
+      if (supa) {
+        const { data } = await supa.auth.getUser();
+        if (data.user?.email) setUser({ email: data.user.email });
+        supa.auth.onAuthStateChange((_ev, session) => {
+          if (session?.user?.email) setUser({ email: session.user.email });
+          else setUser(null);
+        });
+      }
+      setLoading(false);
+    };
+    bootstrap();
   }, []);
 
   const login = async (email: string, password: string) => {
     if (!email || !password) throw new Error("Email and password are required");
-    // Simulate auth; accept any non-empty credentials
     const token = Math.random().toString(36).slice(2);
     localStorage.setItem(STORAGE_KEY, token);
     localStorage.setItem(STORAGE_EMAIL, email);
     setUser({ email });
   };
 
-  const logout = () => {
+  const logout = async () => {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(STORAGE_EMAIL);
+    const supa = getSupabase();
+    if (supa) await supa.auth.signOut();
     setUser(null);
   };
 
