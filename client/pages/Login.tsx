@@ -33,8 +33,18 @@ export default function Login() {
   };
 
   return (
-    <section className="container py-24">
-      <div className="mx-auto max-w-md rounded-lg border bg-card p-6 shadow-sm text-center">
+    <section className="relative min-h-screen grid place-items-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        aria-hidden
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1495653797063-114787b77b23?q=80&w=2070&auto=format&fit=crop)",
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/75 to-background/90" aria-hidden />
+
+      <div className="relative mx-auto max-w-md rounded-xl border bg-card/90 backdrop-blur p-6 shadow-lg text-center">
         <h1 className="text-2xl font-bold tracking-tight">Login</h1>
         <p className="mt-2 text-sm text-muted-foreground">Sign in to continue to Petal & Stem.</p>
         <div className="mt-6 grid gap-3">
