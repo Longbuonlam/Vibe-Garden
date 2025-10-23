@@ -171,7 +171,9 @@ export default function Login() {
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold tracking-tight text-center">Login</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-center">
+                Login
+              </h1>
             </div>
             <p className="text-sm text-muted-foreground">
               Sign in to your account
@@ -193,11 +195,7 @@ export default function Login() {
                 disabled={loading}
                 className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={loading}
-              >
+              <Button type="submit" className="w-full" disabled={loading}>
                 {loading ? "Signing in..." : "Sign In"}
               </Button>
             </form>
@@ -206,7 +204,9 @@ export default function Login() {
                 <div className="w-full border-t border-muted"></div>
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card/90 px-2 text-muted-foreground">Or</span>
+                <span className="bg-card/90 px-2 text-muted-foreground">
+                  Or
+                </span>
               </div>
             </div>
             <div className="mt-4 grid gap-2">
@@ -244,7 +244,9 @@ export default function Login() {
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold tracking-tight text-center">Sign Up</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-center">
+                Sign Up
+              </h1>
             </div>
             <p className="text-sm text-muted-foreground">
               Create a new account
@@ -266,11 +268,7 @@ export default function Login() {
                 disabled={loading}
                 className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={loading}
-              >
+              <Button type="submit" className="w-full" disabled={loading}>
                 {loading ? "Creating account..." : "Create Account"}
               </Button>
             </form>
@@ -279,7 +277,9 @@ export default function Login() {
                 <div className="w-full border-t border-muted"></div>
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card/90 px-2 text-muted-foreground">Or</span>
+                <span className="bg-card/90 px-2 text-muted-foreground">
+                  Or
+                </span>
               </div>
             </div>
             <div className="mt-4 grid gap-2">
