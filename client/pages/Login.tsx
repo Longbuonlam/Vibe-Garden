@@ -161,16 +161,17 @@ export default function Login() {
 
         {mode === "login" && (
           <>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="relative mb-4">
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setMode("choice")}
                 disabled={loading}
+                className="absolute left-0 top-0"
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold tracking-tight flex-1 text-center">Login</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-center">Login</h1>
             </div>
             <p className="text-sm text-muted-foreground">
               Sign in to your account
@@ -233,16 +234,17 @@ export default function Login() {
 
         {mode === "signup" && (
           <>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="relative mb-4">
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setMode("choice")}
                 disabled={loading}
+                className="absolute left-0 top-0"
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold tracking-tight flex-1 text-center">Sign Up</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-center">Sign Up</h1>
             </div>
             <p className="text-sm text-muted-foreground">
               Create a new account
