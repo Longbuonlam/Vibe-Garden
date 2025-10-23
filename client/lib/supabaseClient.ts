@@ -18,3 +18,9 @@ export async function oauthSignIn(provider: "google" | "facebook") {
   });
   if (error) throw error;
 }
+
+export async function emailSignUp(email: string, password: string) {
+  const supabase = getSupabase();
+  if (!supabase) throw new Error("Supabase not configured");
+  return supabase.auth.signUp({ email, password });
+}

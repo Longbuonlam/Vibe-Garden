@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "sonner";
-import { oauthSignIn, getSupabase } from "@/lib/supabaseClient";
-import { Facebook } from "lucide-react";
+import { oauthSignIn, getSupabase, emailSignUp } from "@/lib/supabaseClient";
+import { Facebook, ArrowLeft } from "lucide-react";
 import { useAuth } from "@/auth/AuthContext";
+import { useState } from "react";
 
 function GoogleIcon() {
   return (
@@ -16,22 +17,29 @@ function GoogleIcon() {
   );
 }
 
+type AuthMode = "choice" | "login" | "signup";
+
 export default function Login() {
   const navigate = useNavigate();
   const location = useLocation() as any;
   const from = location.state?.from?.pathname || "/";
-  const { socialLogin } = useAuth();
+  const { socialLogin, signUp } = useAuth();
+  const [mode, setMode] = useState<AuthMode>("choice");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onProvider = async (provider: "google" | "facebook") => {
     try {
+      setLoading(true);
       const supa = getSupabase();
       if (!supa) {
         // Mock OAuth locally for now
-        const email =
+        const mockEmail =
           provider === "google"
             ? "user.google@example.com"
             : "user.facebook@example.com";
-        socialLogin(email);
+        socialLogin(mockEmail);
         toast.success(`Signed in with ${provider}`);
         navigate(from, { replace: true });
         return;
@@ -41,6 +49,72 @@ export default function Login() {
       navigate(from, { replace: true });
     } catch (e: any) {
       toast.error(e?.message || "Login failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSignUp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !password) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const supa = getSupabase();
+      if (!supa) {
+        // Mock signup locally
+        await signUp(email, password);
+        toast.success("Account created successfully!");
+        navigate(from, { replace: true });
+        return;
+      }
+      // Real Supabase signup
+      const { error } = await emailSignUp(email, password);
+      if (error) throw error;
+      toast.success("Check your email to confirm your account");
+      setEmail("");
+      setPassword("");
+      setMode("choice");
+    } catch (e: any) {
+      toast.error(e?.message || "Sign up failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !password) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const supa = getSupabase();
+      if (!supa) {
+        // Mock login locally
+        socialLogin(email);
+        toast.success("Logged in successfully!");
+        navigate(from, { replace: true });
+        return;
+      }
+      // Real Supabase login
+      const { error } = await supa.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      toast.success("Logged in successfully!");
+      navigate(from, { replace: true });
+    } catch (e: any) {
+      toast.error(e?.message || "Login failed");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -60,28 +134,202 @@ export default function Login() {
       />
 
       <div className="relative mx-auto max-w-md rounded-xl border bg-card/90 backdrop-blur p-6 shadow-lg text-center">
-        <h1 className="text-2xl font-bold tracking-tight">Login</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Sign in to continue to Petal & Stem.
-        </p>
-        <div className="mt-6 grid gap-3">
-          <Button
-            onClick={() => onProvider("google")}
-            className="w-full"
-            variant="secondary"
-          >
-            <GoogleIcon />
-            <span>Continue with Google</span>
-          </Button>
-          <Button
-            onClick={() => onProvider("facebook")}
-            className="w-full"
-            variant="secondary"
-          >
-            <Facebook className="h-5 w-5" />
-            <span>Continue with Facebook</span>
-          </Button>
-        </div>
+        {mode === "choice" && (
+          <>
+            <h1 className="text-2xl font-bold tracking-tight">Welcome</h1>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Sign in or create an account to continue to Petal & Stem.
+            </p>
+            <div className="mt-6 grid gap-3">
+              <Button
+                onClick={() => setMode("login")}
+                className="w-full"
+                variant="default"
+              >
+                Login
+              </Button>
+              <Button
+                onClick={() => setMode("signup")}
+                className="w-full"
+                variant="outline"
+              >
+                Sign Up
+              </Button>
+            </div>
+            <div className="mt-6 relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-muted"></div>
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-card/90 px-2 text-muted-foreground">Or continue with</span>
+              </div>
+            </div>
+            <div className="mt-6 grid gap-3">
+              <Button
+                onClick={() => onProvider("google")}
+                className="w-full"
+                variant="secondary"
+                disabled={loading}
+              >
+                <GoogleIcon />
+                <span>Google</span>
+              </Button>
+              <Button
+                onClick={() => onProvider("facebook")}
+                className="w-full"
+                variant="secondary"
+                disabled={loading}
+              >
+                <Facebook className="h-5 w-5" />
+                <span>Facebook</span>
+              </Button>
+            </div>
+          </>
+        )}
+
+        {mode === "login" && (
+          <>
+            <div className="flex items-center gap-2 mb-4">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setMode("choice")}
+                disabled={loading}
+              >
+                <ArrowLeft className="h-4 w-4" />
+              </Button>
+              <h1 className="text-2xl font-bold tracking-tight flex-1">Login</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Sign in to your account
+            </p>
+            <form onSubmit={handleLogin} className="mt-6 space-y-4">
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
+                className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                disabled={loading}
+                className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={loading}
+              >
+                {loading ? "Signing in..." : "Sign In"}
+              </Button>
+            </form>
+            <div className="mt-4 relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-muted"></div>
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-card/90 px-2 text-muted-foreground">Or</span>
+              </div>
+            </div>
+            <div className="mt-4 grid gap-2">
+              <Button
+                onClick={() => onProvider("google")}
+                variant="secondary"
+                className="w-full"
+                disabled={loading}
+              >
+                <GoogleIcon />
+                <span>Google</span>
+              </Button>
+              <Button
+                onClick={() => onProvider("facebook")}
+                variant="secondary"
+                className="w-full"
+                disabled={loading}
+              >
+                <Facebook className="h-5 w-5" />
+                <span>Facebook</span>
+              </Button>
+            </div>
+          </>
+        )}
+
+        {mode === "signup" && (
+          <>
+            <div className="flex items-center gap-2 mb-4">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setMode("choice")}
+                disabled={loading}
+              >
+                <ArrowLeft className="h-4 w-4" />
+              </Button>
+              <h1 className="text-2xl font-bold tracking-tight flex-1">Sign Up</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Create a new account
+            </p>
+            <form onSubmit={handleSignUp} className="mt-6 space-y-4">
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
+                className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <input
+                type="password"
+                placeholder="Password (min 6 characters)"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                disabled={loading}
+                className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={loading}
+              >
+                {loading ? "Creating account..." : "Create Account"}
+              </Button>
+            </form>
+            <div className="mt-4 relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-muted"></div>
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-card/90 px-2 text-muted-foreground">Or</span>
+              </div>
+            </div>
+            <div className="mt-4 grid gap-2">
+              <Button
+                onClick={() => onProvider("google")}
+                variant="secondary"
+                className="w-full"
+                disabled={loading}
+              >
+                <GoogleIcon />
+                <span>Google</span>
+              </Button>
+              <Button
+                onClick={() => onProvider("facebook")}
+                variant="secondary"
+                className="w-full"
+                disabled={loading}
+              >
+                <Facebook className="h-5 w-5" />
+                <span>Facebook</span>
+              </Button>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
