@@ -9,6 +9,7 @@ interface AuthContextValue {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
+  signUp: (email: string, password: string) => Promise<void>;
   socialLogin: (email: string) => void;
   logout: () => void;
 }
@@ -51,6 +52,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser({ email });
   };
 
+  const signUp = async (email: string, password: string) => {
+    if (!email || !password) throw new Error("Email and password are required");
+    const token = Math.random().toString(36).slice(2);
+    localStorage.setItem(STORAGE_KEY, token);
+    localStorage.setItem(STORAGE_EMAIL, email);
+    setUser({ email });
+  };
+
   const socialLogin = (email: string) => {
     localStorage.setItem(STORAGE_KEY, "mock_oauth");
     localStorage.setItem(STORAGE_EMAIL, email);
@@ -66,7 +75,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const value = useMemo(
-    () => ({ user, loading, login, socialLogin, logout }),
+    () => ({ user, loading, login, signUp, socialLogin, logout }),
     [user, loading],
   );
 
