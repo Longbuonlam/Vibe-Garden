@@ -198,7 +198,7 @@ export default function Login() {
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold tracking-tight flex-1">Login</h1>
+              <h1 className="text-2xl font-bold tracking-tight flex-1 text-center">Login</h1>
             </div>
             <p className="text-sm text-muted-foreground">
               Sign in to your account
@@ -270,7 +270,7 @@ export default function Login() {
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold tracking-tight flex-1">Sign Up</h1>
+              <h1 className="text-2xl font-bold tracking-tight flex-1 text-center">Sign Up</h1>
             </div>
             <p className="text-sm text-muted-foreground">
               Create a new account
