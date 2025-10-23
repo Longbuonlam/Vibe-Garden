@@ -156,34 +156,6 @@ export default function Login() {
                 Sign Up
               </Button>
             </div>
-            <div className="mt-6 relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-muted"></div>
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card/90 px-2 text-muted-foreground">Or continue with</span>
-              </div>
-            </div>
-            <div className="mt-6 grid gap-3">
-              <Button
-                onClick={() => onProvider("google")}
-                className="w-full"
-                variant="secondary"
-                disabled={loading}
-              >
-                <GoogleIcon />
-                <span>Google</span>
-              </Button>
-              <Button
-                onClick={() => onProvider("facebook")}
-                className="w-full"
-                variant="secondary"
-                disabled={loading}
-              >
-                <Facebook className="h-5 w-5" />
-                <span>Facebook</span>
-              </Button>
-            </div>
           </>
         )}
 
