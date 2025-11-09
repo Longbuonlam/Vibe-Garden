@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import UserMenu from "@/components/site/UserMenu";
+import CartDropdown from "@/components/site/CartDropdown";
 
 const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
   `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -38,9 +38,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button variant="secondary" size="icon" aria-label="Open cart">
-            <ShoppingCart />
-          </Button>
+          <CartDropdown />
           <UserMenu />
         </div>
       </div>
