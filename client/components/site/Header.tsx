@@ -1,7 +1,7 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/auth/AuthContext";
+import UserMenu from "@/components/site/UserMenu";
 
 const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
   `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -9,8 +9,6 @@ const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
   }`;
 
 export default function Header() {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -39,25 +37,11 @@ export default function Header() {
           </NavLink>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Button variant="secondary" size="icon" aria-label="Open cart">
             <ShoppingCart />
           </Button>
-          {user ? (
-            <Button
-              variant="ghost"
-              onClick={() => {
-                logout();
-                navigate("/login");
-              }}
-            >
-              Logout
-            </Button>
-          ) : (
-            <Button variant="ghost" asChild>
-              <Link to="/login">Login</Link>
-            </Button>
-          )}
+          <UserMenu />
         </div>
       </div>
     </header>
