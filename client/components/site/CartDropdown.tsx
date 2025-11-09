@@ -68,9 +68,7 @@ export default function CartDropdown() {
                       </p>
                       <div className="mt-2 flex items-center gap-2">
                         <button
-                          onClick={() =>
-                            removeItem(item.id)
-                          }
+                          onClick={() => removeItem(item.id)}
                           className="text-xs text-muted-foreground hover:text-foreground"
                         >
                           Qty: {item.quantity}

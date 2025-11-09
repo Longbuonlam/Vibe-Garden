@@ -25,7 +25,9 @@ export default function Checkout() {
     return (
       <div className="min-h-screen flex items-center justify-center py-12">
         <div className="text-center space-y-4">
-          <h1 className="text-3xl font-bold tracking-tight">Your Cart is Empty</h1>
+          <h1 className="text-3xl font-bold tracking-tight">
+            Your Cart is Empty
+          </h1>
           <Button onClick={() => navigate("/shop")}>Back to Shop</Button>
         </div>
       </div>
@@ -48,11 +50,15 @@ export default function Checkout() {
           <div className="bg-card border border-border rounded-lg p-4 space-y-2 text-sm text-left">
             <div>
               <p className="text-muted-foreground">Order Number:</p>
-              <p className="font-semibold">#ORD{Math.floor(Math.random() * 1000000)}</p>
+              <p className="font-semibold">
+                #ORD{Math.floor(Math.random() * 1000000)}
+              </p>
             </div>
             <div>
               <p className="text-muted-foreground">Total Amount:</p>
-              <p className="font-semibold text-lg">${(total * 1.1).toFixed(2)}</p>
+              <p className="font-semibold text-lg">
+                ${(total * 1.1).toFixed(2)}
+              </p>
             </div>
             <div>
               <p className="text-muted-foreground">Estimated Delivery:</p>
@@ -212,11 +218,7 @@ export default function Checkout() {
             >
               Back to Cart
             </Button>
-            <Button
-              type="submit"
-              disabled={isProcessing}
-              className="flex-1"
-            >
+            <Button type="submit" disabled={isProcessing} className="flex-1">
               {isProcessing ? "Processing..." : "Place Order"}
               {!isProcessing && <ArrowRight className="ml-2 h-4 w-4" />}
             </Button>
@@ -229,10 +231,7 @@ export default function Checkout() {
 
             <div className="space-y-3 max-h-48 overflow-y-auto border-t border-border pt-4">
               {items.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex justify-between text-sm"
-                >
+                <div key={item.id} className="flex justify-between text-sm">
                   <span className="text-muted-foreground">
                     {item.name} x {item.quantity}
                   </span>

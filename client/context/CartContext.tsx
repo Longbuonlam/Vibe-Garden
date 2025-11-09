@@ -44,7 +44,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       const existingItem = prevItems.find((i) => i.id === item.id);
       if (existingItem) {
         return prevItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
         );
       }
       return [...prevItems, { ...item, quantity: 1 }];
@@ -61,7 +61,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       return;
     }
     setItems((prevItems) =>
-      prevItems.map((i) => (i.id === id ? { ...i, quantity } : i))
+      prevItems.map((i) => (i.id === id ? { ...i, quantity } : i)),
     );
   };
 
@@ -79,12 +79,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       total,
       itemCount,
     }),
-    [items, total, itemCount]
+    [items, total, itemCount],
   );
 
-  return (
-    <CartContext.Provider value={value}>{children}</CartContext.Provider>
-  );
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 
 export function useCart() {

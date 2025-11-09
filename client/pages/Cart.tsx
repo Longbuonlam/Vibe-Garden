@@ -10,7 +10,9 @@ export default function Cart() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center py-12">
         <div className="text-center space-y-4">
-          <h1 className="text-3xl font-bold tracking-tight">Your Cart is Empty</h1>
+          <h1 className="text-3xl font-bold tracking-tight">
+            Your Cart is Empty
+          </h1>
           <p className="text-muted-foreground">
             Add some beautiful flowers to get started
           </p>
@@ -71,9 +73,7 @@ export default function Cart() {
                     className="w-12 text-center border border-border rounded py-1"
                   />
                   <button
-                    onClick={() =>
-                      updateQuantity(item.id, item.quantity + 1)
-                    }
+                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     className="p-1 border border-border rounded hover:bg-accent"
                     aria-label="Increase quantity"
                   >
