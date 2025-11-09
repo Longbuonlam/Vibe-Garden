@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/context/CartContext";
+import { toast } from "sonner";
 
 export interface Product {
   id: string;
@@ -8,7 +10,14 @@ export interface Product {
   image: string;
 }
 
-export default function ProductCard({ name, price, image }: Product) {
+export default function ProductCard({ id, name, price, image }: Product) {
+  const { addItem } = useCart();
+
+  const handleAddToCart = () => {
+    addItem({ id, name, price, image });
+    toast.success(`${name} added to cart!`);
+  };
+
   return (
     <Card className="overflow-hidden group">
       <div className="aspect-square w-full overflow-hidden">
@@ -25,7 +34,9 @@ export default function ProductCard({ name, price, image }: Product) {
             <h3 className="font-semibold text-base">{name}</h3>
             <p className="text-sm text-muted-foreground">${price.toFixed(2)}</p>
           </div>
-          <Button size="sm">Add to Cart</Button>
+          <Button size="sm" onClick={handleAddToCart}>
+            Add to Cart
+          </Button>
         </div>
       </CardContent>
     </Card>
