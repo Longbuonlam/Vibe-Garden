@@ -12,9 +12,12 @@ import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import Layout from "./components/site/Layout";
 import RequireAuth from "./auth/RequireAuth";
 import { AuthProvider } from "./auth/AuthContext";
+import { CartProvider } from "./context/CartContext";
 
 const queryClient = new QueryClient();
 
@@ -25,24 +28,42 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <AuthProvider>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route element={<Layout />}>
-              <Route
-                path="/"
-                element={
-                  <RequireAuth>
-                    <Index />
-                  </RequireAuth>
-                }
-              />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
+          <CartProvider>
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route element={<Layout />}>
+                <Route
+                  path="/"
+                  element={
+                    <RequireAuth>
+                      <Index />
+                    </RequireAuth>
+                  }
+                />
+                <Route path="/shop" element={<Shop />} />
+                <Route
+                  path="/cart"
+                  element={
+                    <RequireAuth>
+                      <Cart />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/checkout"
+                  element={
+                    <RequireAuth>
+                      <Checkout />
+                    </RequireAuth>
+                  }
+                />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </CartProvider>
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
