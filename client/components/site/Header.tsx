@@ -18,7 +18,7 @@ export default function Header() {
             aria-hidden
           />
           <span className="text-lg font-semibold tracking-tight">
-            Petal & Stem
+            Tiệm hoa có nàng
           </span>
         </Link>
 
