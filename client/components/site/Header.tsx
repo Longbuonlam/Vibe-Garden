@@ -30,10 +30,10 @@ export default function Header() {
             Sản phẩm
           </NavLink>
           <NavLink to="/about" className={navLinkClasses}>
-            About
+            Về chúng tôi
           </NavLink>
           <NavLink to="/contact" className={navLinkClasses}>
-            Contact
+            Liên hệ
           </NavLink>
         </nav>
 
