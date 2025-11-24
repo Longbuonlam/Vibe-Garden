@@ -78,7 +78,7 @@ export default function Shop() {
           <h2 className="text-2xl font-bold mb-6 ml-16">Bó hoa tươi</h2>
           <div className="relative w-full px-16">
             <div className="grid grid-cols-4 gap-6">
-              {visibleProducts.map((product) => (
+              {visibleProductsSecond.map((product) => (
                 <ProductCard key={product.id} {...product} />
               ))}
             </div>
@@ -87,8 +87,8 @@ export default function Shop() {
               variant="outline"
               size="icon"
               className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-              onClick={handlePrevious}
-              disabled={!canShowPrevious}
+              onClick={() => handlePrevious(setCurrentIndexSecond)}
+              disabled={!canShowPrevious(currentIndexSecond)}
             >
               <ChevronLeft className="h-6 w-6" />
             </Button>
@@ -97,8 +97,8 @@ export default function Shop() {
               variant="outline"
               size="icon"
               className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-              onClick={handleNext}
-              disabled={!canShowNext}
+              onClick={() => handleNext(setCurrentIndexSecond)}
+              disabled={!canShowNext(currentIndexSecond)}
             >
               <ChevronRight className="h-6 w-6" />
             </Button>
