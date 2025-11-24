@@ -7,28 +7,31 @@ import { products } from "@/data/products";
 const ITEMS_PER_VIEW = 4;
 
 export default function Shop() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndexFirst, setCurrentIndexFirst] = useState(0);
+  const [currentIndexSecond, setCurrentIndexSecond] = useState(0);
 
-  const handlePrevious = () => {
-    setCurrentIndex((prev) =>
+  const handlePrevious = (setter) => {
+    setter((prev) =>
       prev === 0 ? Math.max(0, products.length - ITEMS_PER_VIEW) : prev - 1
     );
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) =>
+  const handleNext = (setter) => {
+    setter((prev) =>
       prev + ITEMS_PER_VIEW >= products.length
         ? 0
         : Math.min(prev + 1, products.length - ITEMS_PER_VIEW)
     );
   };
 
-  const visibleProducts = products.slice(
-    currentIndex,
-    currentIndex + ITEMS_PER_VIEW
-  );
-  const canShowPrevious = currentIndex > 0;
-  const canShowNext = currentIndex + ITEMS_PER_VIEW < products.length;
+  const getVisibleProducts = (currentIndex) =>
+    products.slice(currentIndex, currentIndex + ITEMS_PER_VIEW);
+  const canShowPrevious = (currentIndex) => currentIndex > 0;
+  const canShowNext = (currentIndex) =>
+    currentIndex + ITEMS_PER_VIEW < products.length;
+
+  const visibleProductsFirst = getVisibleProducts(currentIndexFirst);
+  const visibleProductsSecond = getVisibleProducts(currentIndexSecond);
 
   return (
     <div className="space-y-12">
