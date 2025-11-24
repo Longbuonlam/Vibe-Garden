@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="container relative z-10 h-full flex flex-col items-start justify-end pb-12">
         <div className="mt-6">
           <Button asChild size="lg">
-            <Link to="/shop">Shop Now</Link>
+            <Link to="/shop">Khám phá</Link>
           </Button>
         </div>
       </div>
