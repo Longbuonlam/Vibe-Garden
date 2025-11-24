@@ -16,13 +16,6 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent" />
       <div className="container relative z-10 h-full flex flex-col items-start justify-end pb-12">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground">
-          Fresh Flowers, Fresh Feelings
-        </h1>
-        <p className="mt-4 max-w-xl text-base md:text-lg text-foreground/80">
-          Hand-picked bouquets delivered with care. Simple, elegant, and made to
-          brighten your day.
-        </p>
         <div className="mt-6">
           <Button asChild size="lg">
             <Link to="/shop">Shop Now</Link>
