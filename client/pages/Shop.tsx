@@ -41,7 +41,7 @@ export default function Shop() {
 
       <div className="space-y-16">
         <div>
-          <h2 className="text-2xl font-bold mb-6">Hoa thả bình</h2>
+          <h2 className="text-2xl font-bold mb-6 ml-16">Hoa thả bình</h2>
           <div className="relative w-full px-16">
             <div className="grid grid-cols-4 gap-6">
               {visibleProducts.map((product) => (
@@ -72,7 +72,7 @@ export default function Shop() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold mb-6">Bó hoa tươi</h2>
+          <h2 className="text-2xl font-bold mb-6 ml-16">Bó hoa tươi</h2>
           <div className="relative w-full px-16">
             <div className="grid grid-cols-4 gap-6">
               {visibleProducts.map((product) => (
