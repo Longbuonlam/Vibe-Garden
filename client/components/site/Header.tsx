@@ -24,10 +24,10 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-1">
           <NavLink to="/" className={navLinkClasses} end>
-            Home
+            Trang chủ
           </NavLink>
           <NavLink to="/shop" className={navLinkClasses}>
-            Shop
+            Sản phẩm
           </NavLink>
           <NavLink to="/about" className={navLinkClasses}>
             About
