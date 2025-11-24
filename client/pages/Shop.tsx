@@ -39,32 +39,68 @@ export default function Shop() {
         </p>
       </div>
 
-      <div className="relative w-full px-16">
-        <div className="grid grid-cols-4 gap-6">
-          {visibleProducts.map((product) => (
-            <ProductCard key={product.id} {...product} />
-          ))}
+      <div className="space-y-16">
+        <div>
+          <h2 className="text-2xl font-bold mb-6">Hoa thả bình</h2>
+          <div className="relative w-full px-16">
+            <div className="grid grid-cols-4 gap-6">
+              {visibleProducts.map((product) => (
+                <ProductCard key={product.id} {...product} />
+              ))}
+            </div>
+
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
+              onClick={handlePrevious}
+              disabled={!canShowPrevious}
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
+              onClick={handleNext}
+              disabled={!canShowNext}
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
+          </div>
         </div>
 
-        <Button
-          variant="outline"
-          size="icon"
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-          onClick={handlePrevious}
-          disabled={!canShowPrevious}
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </Button>
+        <div>
+          <h2 className="text-2xl font-bold mb-6">Bó hoa tươi</h2>
+          <div className="relative w-full px-16">
+            <div className="grid grid-cols-4 gap-6">
+              {visibleProducts.map((product) => (
+                <ProductCard key={product.id} {...product} />
+              ))}
+            </div>
 
-        <Button
-          variant="outline"
-          size="icon"
-          className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-          onClick={handleNext}
-          disabled={!canShowNext}
-        >
-          <ChevronRight className="h-6 w-6" />
-        </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
+              onClick={handlePrevious}
+              disabled={!canShowPrevious}
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
+              onClick={handleNext}
+              disabled={!canShowNext}
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
