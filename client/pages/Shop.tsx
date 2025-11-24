@@ -12,7 +12,7 @@ export default function Shop() {
 
   const handlePrevious = (setter) => {
     setter((prev) =>
-      prev === 0 ? Math.max(0, products.length - ITEMS_PER_VIEW) : prev - 1
+      prev === 0 ? Math.max(0, products.length - ITEMS_PER_VIEW) : prev - 1,
     );
   };
 
@@ -20,7 +20,7 @@ export default function Shop() {
     setter((prev) =>
       prev + ITEMS_PER_VIEW >= products.length
         ? 0
-        : Math.min(prev + 1, products.length - ITEMS_PER_VIEW)
+        : Math.min(prev + 1, products.length - ITEMS_PER_VIEW),
     );
   };
 
