@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="container relative z-10 h-full flex flex-col items-start justify-end pb-12">
         <div className="mt-6">
           <Button asChild size="lg" className="bg-[#C08A92] hover:bg-[#B17582] text-white">
-            <Link to="/shop">Khám phá</Link>
+            <Link to="/shop" className="font-bold">Khám phá</Link>
           </Button>
         </div>
       </div>
