@@ -15,8 +15,7 @@ export default function Hero() {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent" />
-      <div className="container relative z-10 h-full flex flex-col items-start justify-end pb-12">
-      </div>
+      <div className="container relative z-10 h-full flex flex-col items-start justify-end pb-12"></div>
     </section>
   );
 }
