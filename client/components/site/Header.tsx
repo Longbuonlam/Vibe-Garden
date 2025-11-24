@@ -13,9 +13,10 @@ export default function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <span
-            className="inline-block h-8 w-8 rounded-full bg-accent"
-            aria-hidden
+          <img
+            src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763998530/2138ef07-a99b-4246-90dc-066392830244_mrkuvr.jpg"
+            alt="Tiệm hoa có nàng logo"
+            className="h-8 w-8 object-cover rounded-full"
           />
           <span className="text-lg font-semibold tracking-tight">
             Tiệm hoa có nàng
