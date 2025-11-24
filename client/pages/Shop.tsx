@@ -1,20 +1,34 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "@/components/site/ProductCard";
-import { Pagination } from "@/components/ui/pagination";
+import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
 
-const PRODUCTS_PER_PAGE = 6;
+const ITEMS_PER_VIEW = 4;
 
 export default function Shop() {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const paginatedProducts = useMemo(() => {
-    const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
-    const endIndex = startIndex + PRODUCTS_PER_PAGE;
-    return products.slice(startIndex, endIndex);
-  }, [currentPage]);
+  const handlePrevious = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? Math.max(0, products.length - ITEMS_PER_VIEW) : prev - 1
+    );
+  };
 
-  const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
+  const handleNext = () => {
+    setCurrentIndex((prev) =>
+      prev + ITEMS_PER_VIEW >= products.length
+        ? 0
+        : Math.min(prev + 1, products.length - ITEMS_PER_VIEW)
+    );
+  };
+
+  const visibleProducts = products.slice(
+    currentIndex,
+    currentIndex + ITEMS_PER_VIEW
+  );
+  const canShowPrevious = currentIndex > 0;
+  const canShowNext = currentIndex + ITEMS_PER_VIEW < products.length;
 
   return (
     <div className="space-y-12">
@@ -25,18 +39,32 @@ export default function Shop() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {paginatedProducts.map((product) => (
-          <ProductCard key={product.id} {...product} />
-        ))}
-      </div>
+      <div className="relative w-full px-16">
+        <div className="grid grid-cols-4 gap-6">
+          {visibleProducts.map((product) => (
+            <ProductCard key={product.id} {...product} />
+          ))}
+        </div>
 
-      <div className="py-8">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={setCurrentPage}
-        />
+        <Button
+          variant="outline"
+          size="icon"
+          className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
+          onClick={handlePrevious}
+          disabled={!canShowPrevious}
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </Button>
+
+        <Button
+          variant="outline"
+          size="icon"
+          className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
+          onClick={handleNext}
+          disabled={!canShowNext}
+        >
+          <ChevronRight className="h-6 w-6" />
+        </Button>
       </div>
     </div>
   );
