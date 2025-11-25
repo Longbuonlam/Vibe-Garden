@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
+import { useState, useMemo } from "react";
 
 export interface Product {
   id: string;
@@ -11,11 +12,33 @@ export interface Product {
 }
 
 export default function ProductCard({ id, name, price, image }: Product) {
-  const { addItem } = useCart();
+  const { addItem, items, updateQuantity } = useCart();
+  const [isAdded, setIsAdded] = useState(false);
+
+  const cartItem = useMemo(
+    () => items.find((item) => item.id === id),
+    [items, id]
+  );
+
+  const currentQuantity = cartItem?.quantity || 0;
 
   const handleAddToCart = () => {
     addItem({ id, name, price, image });
+    setIsAdded(true);
     toast.success(`${name} added to cart!`);
+  };
+
+  const handleIncrease = () => {
+    updateQuantity(id, currentQuantity + 1);
+  };
+
+  const handleDecrease = () => {
+    if (currentQuantity > 1) {
+      updateQuantity(id, currentQuantity - 1);
+    } else {
+      setIsAdded(false);
+      updateQuantity(id, 0);
+    }
   };
 
   return (
@@ -34,9 +57,29 @@ export default function ProductCard({ id, name, price, image }: Product) {
             <h3 className="font-semibold text-base">{name}</h3>
             <p className="text-sm text-muted-foreground">${price.toFixed(2)}</p>
           </div>
-          <Button size="sm" onClick={handleAddToCart}>
-            Add to Cart
-          </Button>
+          {!isAdded && !cartItem ? (
+            <Button size="sm" onClick={handleAddToCart}>
+              Add to Cart
+            </Button>
+          ) : (
+            <div className="flex items-center gap-2 bg-primary/10 rounded-md px-2 py-1">
+              <button
+                onClick={handleDecrease}
+                className="inline-flex items-center justify-center w-6 h-6 text-primary hover:bg-primary/20 rounded transition-colors"
+              >
+                −
+              </button>
+              <span className="w-6 text-center text-sm font-semibold text-primary">
+                {currentQuantity}
+              </span>
+              <button
+                onClick={handleIncrease}
+                className="inline-flex items-center justify-center w-6 h-6 text-primary hover:bg-primary/20 rounded transition-colors"
+              >
+                +
+              </button>
+            </div>
+          )}
         </div>
       </CardContent>
     </Card>
