@@ -11,7 +11,7 @@ export default function Contact() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -39,8 +39,11 @@ export default function Contact() {
               Liên hệ với chúng tôi
             </h2>
             <p className="text-muted-foreground mb-8">
-              Bạn có câu hỏi hoặc yêu cầu tùy chỉnh? Hãy gửi tin nhắn cho chúng tôi.<br />
-              Kết nối với chúng tôi qua các nền tảng mạng xã hội để nhận được câu trả lời trong thời gian sớm nhất.
+              Bạn có câu hỏi hoặc yêu cầu tùy chỉnh? Hãy gửi tin nhắn cho chúng
+              tôi.
+              <br />
+              Kết nối với chúng tôi qua các nền tảng mạng xã hội để nhận được
+              câu trả lời trong thời gian sớm nhất.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -111,72 +114,72 @@ export default function Contact() {
           <div className="flex items-start justify-center md:items-center">
             <div className="flex flex-col w-full max-w-sm">
               <div className="flex flex-col gap-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                  <Facebook className="h-6 w-6 text-foreground" />
-                  <span className="text-base font-medium text-foreground">
-                    Tiệm hoa có nàng
-                  </span>
-                </div>
-              </a>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                    <Facebook className="h-6 w-6 text-foreground" />
+                    <span className="text-base font-medium text-foreground">
+                      Tiệm hoa có nàng
+                    </span>
+                  </div>
+                </a>
 
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                  <Instagram className="h-6 w-6 text-foreground" />
-                  <span className="text-base font-medium text-foreground">
-                    Tiệm hoa có nàng
-                  </span>
-                </div>
-              </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                    <Instagram className="h-6 w-6 text-foreground" />
+                    <span className="text-base font-medium text-foreground">
+                      Tiệm hoa có nàng
+                    </span>
+                  </div>
+                </a>
 
-              <a
-                href="https://threads.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                  <svg
-                    className="h-6 w-6 text-foreground"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="1" />
-                    <path d="M12 3v9m0 9v-9m6 0a6 6 0 1 0-12 0 6 6 0 0 0 12 0" />
-                  </svg>
-                  <span className="text-base font-medium text-foreground">
-                    Tiệm hoa có nàng
-                  </span>
-                </div>
-              </a>
+                <a
+                  href="https://threads.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                    <svg
+                      className="h-6 w-6 text-foreground"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="1" />
+                      <path d="M12 3v9m0 9v-9m6 0a6 6 0 1 0-12 0 6 6 0 0 0 12 0" />
+                    </svg>
+                    <span className="text-base font-medium text-foreground">
+                      Tiệm hoa có nàng
+                    </span>
+                  </div>
+                </a>
 
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                  <Music className="h-6 w-6 text-foreground" />
-                  <span className="text-base font-medium text-foreground">
-                    Tiệm hoa có nàng
-                  </span>
-                </div>
-              </a>
+                <a
+                  href="https://tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                    <Music className="h-6 w-6 text-foreground" />
+                    <span className="text-base font-medium text-foreground">
+                      Tiệm hoa có nàng
+                    </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
