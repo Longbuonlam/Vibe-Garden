@@ -103,7 +103,7 @@ export default function Contact() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
                 size="lg"
               >
-                Send Message
+                Gửi tin nhắn
               </Button>
             </form>
           </div>
