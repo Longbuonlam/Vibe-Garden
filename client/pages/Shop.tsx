@@ -34,7 +34,7 @@ export default function Shop() {
   const visibleProductsSecond = getVisibleProducts(currentIndexSecond);
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 mt-16">
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight">Sản phẩm</h1>
         <p className="mt-2 text-lg text-muted-foreground">
