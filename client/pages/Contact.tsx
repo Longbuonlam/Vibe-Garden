@@ -39,7 +39,7 @@ export default function Contact() {
               Liên hệ với chúng tôi
             </h2>
             <p className="text-muted-foreground mb-8">
-              Bạn có câu hỏi hoặc yêu cầu tùy chỉnh? Hãy gửi tin nhắn cho chúng tôi và chúng tôi sẽ phản hồi ngay cho bạn.
+              Bạn có câu hỏi hoặc yêu cầu tùy chỉnh? Hãy gửi tin nhắn cho chúng tôi và chúng tôi sẽ phản hồi ngay cho bạn.<br />
               Kết nối với chúng tôi qua các nền tảng mạng xã hội để nhận được câu trả lời trong thời gian sớm nhất.
             </p>
 
