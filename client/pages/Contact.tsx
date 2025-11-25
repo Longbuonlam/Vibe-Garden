@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           <div className="flex flex-col">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
-              Contact Us
+              Liên hệ với chúng tôi
             </h2>
             <p className="text-muted-foreground mb-8">
               Questions or custom orders? Send us a message and we'll get right
@@ -58,7 +58,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Your name"
+                  placeholder="Tên của bạn"
                 />
               </div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
-                  placeholder="Your message"
+                  placeholder="Tin nhắn của bạn"
                 />
               </div>
 
