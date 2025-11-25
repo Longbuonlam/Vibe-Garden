@@ -40,13 +40,11 @@ export default function Index() {
           </div>
           <div>
             <h3 className="text-2xl font-semibold tracking-tight">
-              Our Promise
+              Về Tiệm hoa Có Nàng
             </h3>
             <p className="mt-4 max-w-3xl text-muted-foreground">
-              At Petal & Stem, we craft minimal, elegant arrangements using the
-              freshest seasonal blooms. Our mission is to make sending flowers
-              effortless and meaningful—bringing joy, warmth, and a touch of
-              nature to everyday moments.
+              Tiệm hoa Có Nàng là một tiệm hoa online được tạo nên từ tình yêu dành cho cái đẹp và những khoảnh khắc dịu dàng trong đời sống. Chúng tôi chọn lựa những đóa hoa tươi theo mùa, kết hợp với phong cách thiết kế tối giản – tinh tế, để mỗi sản phẩm không chỉ là một bó hoa, mà là một cảm xúc được gửi gắm.
+              Với sự chăm chút trong từng chi tiết và sự thấu hiểu trong từng câu chuyện khách hàng muốn gửi đi, Tiệm hoa Có Nàng mong muốn mang đến những kết nối ấm áp giữa con người qua sắc hoa và hương hoa.
             </p>
           </div>
         </div>
