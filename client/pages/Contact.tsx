@@ -108,8 +108,12 @@ export default function Contact() {
             </form>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div className="flex flex-col gap-4 w-full max-w-sm">
+          <div className="flex items-start justify-center md:items-center">
+            <div className="flex flex-col w-full max-w-sm">
+              <label className="block text-sm font-medium text-foreground mb-6">
+                Kết nối với chúng tôi
+              </label>
+              <div className="flex flex-col gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -176,6 +180,7 @@ export default function Contact() {
                   </span>
                 </div>
               </a>
+              </div>
             </div>
           </div>
         </div>
