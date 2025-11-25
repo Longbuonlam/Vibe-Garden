@@ -140,7 +140,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://threads.net"
+                href="https://threads.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
