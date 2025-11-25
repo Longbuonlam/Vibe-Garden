@@ -31,22 +31,11 @@ export default function Contact() {
 
   return (
     <>
-      <section className="container py-24">
-        <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Contact Us
-          </h1>
-          <p className="mt-4 text-muted-foreground">
-            Have a question or special request? We'd love to hear from you.
-          </p>
-        </div>
-      </section>
-
       <section className="container py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           <div className="flex flex-col">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
-              Get in Touch
+              Contact Us
             </h2>
             <p className="text-muted-foreground mb-8">
               Questions or custom orders? Send us a message and we'll get right
