@@ -54,7 +54,7 @@ export default function ProductCard({ id, name, price, image }: Product) {
             <h3 className="font-semibold text-base">{name}</h3>
             <p className="text-sm text-muted-foreground">${price.toFixed(2)}</p>
           </div>
-          {!isAdded && !cartItem ? (
+          {!cartItem ? (
             <Button size="sm" onClick={handleAddToCart}>
               Add to Cart
             </Button>
