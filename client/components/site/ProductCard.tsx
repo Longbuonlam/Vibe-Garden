@@ -16,7 +16,7 @@ export default function ProductCard({ id, name, price, image }: Product) {
 
   const cartItem = useMemo(
     () => items.find((item) => item.id === id),
-    [items, id]
+    [items, id],
   );
 
   const currentQuantity = cartItem?.quantity || 0;
