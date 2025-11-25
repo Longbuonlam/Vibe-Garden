@@ -109,26 +109,18 @@ export default function Contact() {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="flex flex-col gap-6 w-full max-w-sm">
+            <div className="flex flex-col gap-4 w-full max-w-sm">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
               >
-                <div className="flex items-center gap-4 p-6 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors">
-                  <Facebook
-                    className="h-8 w-8 text-primary"
-                    fill="currentColor"
-                  />
-                  <div>
-                    <p className="text-lg font-semibold text-foreground">
-                      Visit our Facebook
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Connect with us
-                    </p>
-                  </div>
+                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                  <Facebook className="h-6 w-6 text-foreground" />
+                  <span className="text-base font-medium text-foreground">
+                    Tiệm hoa có nàng
+                  </span>
                 </div>
               </a>
 
@@ -138,19 +130,50 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="group"
               >
-                <div className="flex items-center gap-4 p-6 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors">
-                  <Instagram
-                    className="h-8 w-8 text-primary"
-                    fill="currentColor"
-                  />
-                  <div>
-                    <p className="text-lg font-semibold text-foreground">
-                      Follow us on Instagram
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      See our latest designs
-                    </p>
-                  </div>
+                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                  <Instagram className="h-6 w-6 text-foreground" />
+                  <span className="text-base font-medium text-foreground">
+                    Tiệm hoa có nàng
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="https://threads.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                  <svg
+                    className="h-6 w-6 text-foreground"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="1" />
+                    <path d="M12 3v9m0 9v-9m6 0a6 6 0 1 0-12 0 6 6 0 0 0 12 0" />
+                  </svg>
+                  <span className="text-base font-medium text-foreground">
+                    Tiệm hoa có nàng
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                  <Music className="h-6 w-6 text-foreground" />
+                  <span className="text-base font-medium text-foreground">
+                    Tiệm hoa có nàng
+                  </span>
                 </div>
               </a>
             </div>
