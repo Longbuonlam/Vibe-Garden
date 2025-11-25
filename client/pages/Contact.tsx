@@ -109,16 +109,50 @@ export default function Contact() {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="w-full aspect-square rounded-lg bg-muted flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-5xl mb-4">📍</div>
-                <p className="text-muted-foreground font-medium">
-                  Map placeholder
-                </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Your location will appear here
-                </p>
-              </div>
+            <div className="flex flex-col gap-6 w-full max-w-sm">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div className="flex items-center gap-4 p-6 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors">
+                  <Facebook
+                    className="h-8 w-8 text-primary"
+                    fill="currentColor"
+                  />
+                  <div>
+                    <p className="text-lg font-semibold text-foreground">
+                      Visit our Facebook
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Connect with us
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div className="flex items-center gap-4 p-6 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors">
+                  <Instagram
+                    className="h-8 w-8 text-primary"
+                    fill="currentColor"
+                  />
+                  <div>
+                    <p className="text-lg font-semibold text-foreground">
+                      Follow us on Instagram
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      See our latest designs
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
