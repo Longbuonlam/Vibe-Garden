@@ -15,7 +15,13 @@ export default function Hero() {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent" />
-      <div className="container relative z-10 h-full flex flex-col items-start justify-end pb-12"></div>
+      <div className="container relative z-10 h-full flex flex-col items-start justify-end pb-12">
+        <div className="mt-6">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground">
+            <Link to="/shop" className="font-bold">Khám phá</Link>
+          </Button>
+        </div>
+      </div>
     </section>
   );
 }
