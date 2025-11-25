@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Figma, Music } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
