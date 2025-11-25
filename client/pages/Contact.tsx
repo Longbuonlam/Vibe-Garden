@@ -39,8 +39,8 @@ export default function Contact() {
               Liên hệ với chúng tôi
             </h2>
             <p className="text-muted-foreground mb-8">
-              Questions or custom orders? Send us a message and we'll get right
-              back to you.
+              Bạn có câu hỏi hoặc yêu cầu tùy chỉnh? Hãy gửi tin nhắn cho chúng tôi và chúng tôi sẽ phản hồi ngay cho bạn.
+              Kết nối với chúng tôi qua các nền tảng mạng xã hội để nhận được câu trả lời trong thời gian sớm nhất.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
