@@ -14,7 +14,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763998530/2138ef07-a99b-4246-90dc-066392830244_mrkuvr.jpg"
+            src="https://sf-static.upanhlaylink.com/img/image_2025112501b69dc4e9a0e6b7126d17f80fb76437.jpg"
             alt="Tiệm hoa có nàng logo"
             className="h-8 w-8 object-cover rounded-full"
           />
