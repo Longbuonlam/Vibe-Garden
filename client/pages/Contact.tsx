@@ -171,7 +171,7 @@ export default function Contact() {
                 className="group"
               >
                 <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                  <Music className="h-6 w-6 text-foreground" />
+                  <Tiktok className="h-6 w-6 text-foreground" />
                   <span className="text-base font-medium text-foreground">
                     Tiệm hoa có nàng
                   </span>
