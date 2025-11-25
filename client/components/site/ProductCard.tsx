@@ -56,7 +56,7 @@ export default function ProductCard({ id, name, price, image }: Product) {
           </div>
           {!cartItem ? (
             <Button size="sm" onClick={handleAddToCart}>
-              Add to Cart
+              Thêm vào giỏ
             </Button>
           ) : (
             <div className="flex items-center gap-2 bg-primary/10 rounded-md px-2 py-1">

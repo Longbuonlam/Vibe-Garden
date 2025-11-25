@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t bg-background">
       <div className="container py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Petal & Stem. All rights reserved.
+          © {new Date().getFullYear()} Tiệm hoa Có Nàng.
         </p>
         <div className="flex items-center gap-4 text-muted-foreground">
           <a

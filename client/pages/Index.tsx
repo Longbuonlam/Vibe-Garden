@@ -16,13 +16,13 @@ export default function Index() {
       <section className="container py-16 md:py-24">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-            Featured Bouquets
+            Mặt hàng nổi bật
           </h2>
           <a
             href="/shop"
             className="text-primary text-sm md:text-base hover:underline"
           >
-            View all
+            Xem tất cả
           </a>
         </div>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
