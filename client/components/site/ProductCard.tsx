@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 
 export interface Product {
   id: string;
@@ -13,7 +13,6 @@ export interface Product {
 
 export default function ProductCard({ id, name, price, image }: Product) {
   const { addItem, items, updateQuantity } = useCart();
-  const [isAdded, setIsAdded] = useState(false);
 
   const cartItem = useMemo(
     () => items.find((item) => item.id === id),
@@ -24,7 +23,6 @@ export default function ProductCard({ id, name, price, image }: Product) {
 
   const handleAddToCart = () => {
     addItem({ id, name, price, image });
-    setIsAdded(true);
     toast.success(`${name} added to cart!`);
   };
 
@@ -36,7 +34,6 @@ export default function ProductCard({ id, name, price, image }: Product) {
     if (currentQuantity > 1) {
       updateQuantity(id, currentQuantity - 1);
     } else {
-      setIsAdded(false);
       updateQuantity(id, 0);
     }
   };
