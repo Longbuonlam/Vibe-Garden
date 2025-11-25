@@ -49,7 +49,7 @@ export default function Contact() {
                   htmlFor="name"
                   className="block text-sm font-medium text-foreground mb-2"
                 >
-                  Name
+                  Họ và tên
                 </label>
                 <input
                   type="text"
@@ -85,7 +85,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-sm font-medium text-foreground mb-2"
                 >
-                  Message
+                  Tin nhắn
                 </label>
                 <textarea
                   id="message"
