@@ -52,7 +52,7 @@ export default function ProductCard({ id, name, price, image }: Product) {
         <div className="flex items-start justify-between gap-3">
           <div>
             <h3 className="font-semibold text-base">{name}</h3>
-            <p className="text-sm text-muted-foreground">${price.toFixed(2)}</p>
+            <p className="text-sm text-muted-foreground">{price.toFixed(3)}đ</p>
           </div>
           {!cartItem ? (
             <Button size="sm" onClick={handleAddToCart}>

@@ -51,7 +51,7 @@ export default function Cart() {
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-lg">{item.name}</h3>
                 <p className="text-muted-foreground">
-                  ${item.price.toFixed(2)} each
+                  {item.price.toFixed(3)}đ mỗi đơn
                 </p>
                 <div className="mt-3 flex items-center gap-2">
                   <button
@@ -83,7 +83,7 @@ export default function Cart() {
               </div>
               <div className="text-right space-y-2">
                 <div className="font-semibold text-lg">
-                  ${(item.price * item.quantity).toFixed(2)}
+                  {(item.price * item.quantity).toFixed(3)}đ
                 </div>
                 <button
                   onClick={() => removeItem(item.id)}
@@ -104,22 +104,22 @@ export default function Cart() {
             <div className="space-y-2 border-t border-border pt-4">
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Subtotal:</span>
-                <span>${total.toFixed(2)}</span>
+                <span>{total.toFixed(3)}đ</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Shipping:</span>
                 <span>Free</span>
               </div>
-              <div className="flex justify-between text-sm">
+              {/* <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Tax:</span>
-                <span>${(total * 0.1).toFixed(2)}</span>
-              </div>
+                <span>{(total * 0.1).toFixed(3)}đ</span>
+              </div> */}
             </div>
 
             <div className="border-t border-border pt-4">
               <div className="flex justify-between text-lg font-bold">
                 <span>Total:</span>
-                <span>${(total * 1.1).toFixed(2)}</span>
+                <span>{(total).toFixed(3)}đ</span>
               </div>
             </div>
 

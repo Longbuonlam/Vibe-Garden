@@ -64,7 +64,7 @@ export default function CartDropdown() {
                         {item.name}
                       </h4>
                       <p className="text-xs text-muted-foreground">
-                        ${item.price.toFixed(2)}
+                        {item.price.toFixed(3)}đ 
                       </p>
                       <div className="mt-2 flex items-center gap-2">
                         <button
@@ -92,7 +92,7 @@ export default function CartDropdown() {
               <div className="border-t border-border p-4 space-y-3">
                 <div className="flex justify-between text-sm font-semibold">
                   <span>Total:</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>{total.toFixed(3)}đ</span>
                 </div>
                 <Link
                   to="/cart"
