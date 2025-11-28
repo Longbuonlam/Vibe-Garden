@@ -9,16 +9,20 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-4 text-muted-foreground">
           <a
-            href="#"
+            href="https://www.facebook.com/people/Ti%E1%BB%87m-hoa-c%C3%B3-n%C3%A0ng/61581625951395/"
             aria-label="Facebook"
             className="hover:text-foreground transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Facebook className="h-5 w-5" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/tiemhoaconang?igsh=ZWV4aDFoNXRiYzQw"
             aria-label="Instagram"
             className="hover:text-foreground transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Instagram className="h-5 w-5" />
           </a>

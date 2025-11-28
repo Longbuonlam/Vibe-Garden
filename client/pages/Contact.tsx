@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Facebook, Instagram, Figma, Music } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -20,14 +21,42 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (isSubmitting) return; // prevent double submissions
+
     if (!formData.name || !formData.email || !formData.message) {
       toast.error("Please fill in all fields");
       return;
     }
-    toast.success("Message sent! We'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+
+    setIsSubmitting(true);
+    let success = false;
+    try {
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await resp.json().catch(() => null);
+
+      if (!resp.ok || !data || data.success === false) {
+        const msg = data?.error || data?.message || 'Failed to send message';
+        throw new Error(msg);
+      }
+
+      success = true;
+      toast.success("Message sent! We'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      const message = (err as any)?.message || 'Failed to send message';
+      toast.error(message);
+    } finally {
+      // only reset submitting flag if submission failed; otherwise keep as false to allow next sends
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -115,7 +144,7 @@ export default function Contact() {
             <div className="flex flex-col w-full max-w-sm">
               <div className="flex flex-col gap-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/people/Ti%E1%BB%87m-hoa-c%C3%B3-n%C3%A0ng/61581625951395/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -129,7 +158,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/tiemhoaconang?igsh=ZWV4aDFoNXRiYzQw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -143,24 +172,18 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://threads.com"
+                  href="https://www.threads.com/@tiemhoaconang?xmt=AQF0vIha1sciTZ8_pQkfJrD1DjLFpKyW-Mx0cDMbEQVBZP0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
                 >
                   <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                    <svg
-                      className="h-6 w-6 text-foreground"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <circle cx="12" cy="12" r="1" />
-                      <path d="M12 3v9m0 9v-9m6 0a6 6 0 1 0-12 0 6 6 0 0 0 12 0" />
-                    </svg>
+                    <img
+                      src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1764353897/thread_fb81ba.jpg"
+                      alt="Threads"
+                      className="h-6 w-6 object-contain"
+                      loading="lazy"
+                    />
                     <span className="text-base font-medium text-foreground">
                       Tiệm hoa có nàng
                     </span>
@@ -168,13 +191,18 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://tiktok.com"
+                  href="https://www.tiktok.com/@tiemhoaconang"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
                 >
                   <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                    <Music className="h-6 w-6 text-foreground" />
+                    <img
+                      src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1764354005/tiktok_izyuw9.webp"
+                      alt="TikTok"
+                      className="h-6 w-6 object-contain"
+                      loading="lazy"
+                    />
                     <span className="text-base font-medium text-foreground">
                       Tiệm hoa có nàng
                     </span>
