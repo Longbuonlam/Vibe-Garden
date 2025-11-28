@@ -11,13 +11,13 @@ export default function Cart() {
       <div className="min-h-screen flex flex-col items-center justify-center py-12">
         <div className="text-center space-y-4">
           <h1 className="text-3xl font-bold tracking-tight">
-            Your Cart is Empty
+            Giỏ hàng của bạn đang trống
           </h1>
           <p className="text-muted-foreground">
-            Add some beautiful flowers to get started
+            Hãy khám phá các sản phẩm tuyệt vời của chúng tôi và thêm vào giỏ hàng nhé!
           </p>
           <Link to="/shop">
-            <Button>Continue Shopping</Button>
+            <Button>Tiếp tục mua sắm</Button>
           </Link>
         </div>
       </div>
@@ -27,11 +27,11 @@ export default function Cart() {
   return (
     <div className="space-y-8 py-8">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold tracking-tight">Shopping Cart</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Giỏ hàng</h1>
         <Link to="/shop">
           <Button variant="outline" size="sm">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Continue Shopping
+            Tiếp tục mua sắm
           </Button>
         </Link>
       </div>
@@ -99,16 +99,16 @@ export default function Cart() {
 
         <div className="lg:col-span-1">
           <div className="border border-border rounded-lg p-6 space-y-4 sticky top-24">
-            <h2 className="text-xl font-semibold">Order Summary</h2>
+            <h2 className="text-xl font-semibold">Thông tin đơn hàng</h2>
 
             <div className="space-y-2 border-t border-border pt-4">
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Subtotal:</span>
+                <span className="text-muted-foreground">Số tiền tạm tính:</span>
                 <span>{total.toFixed(3)}đ</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Shipping:</span>
-                <span>Free</span>
+                <span className="text-muted-foreground">Phí vận chuyển:</span>
+                <span>Miễn phí</span>
               </div>
               {/* <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Tax:</span>
@@ -118,20 +118,20 @@ export default function Cart() {
 
             <div className="border-t border-border pt-4">
               <div className="flex justify-between text-lg font-bold">
-                <span>Total:</span>
+                <span>Tổng tiền:</span>
                 <span>{(total).toFixed(3)}đ</span>
               </div>
             </div>
 
             <Link to="/checkout" className="block">
-              <Button className="w-full">Proceed to Checkout</Button>
+              <Button className="w-full">Tiến hành đặt hàng</Button>
             </Link>
 
             <button
               onClick={clearCart}
               className="w-full text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Clear Cart
+              Xóa giỏ hàng
             </button>
           </div>
         </div>

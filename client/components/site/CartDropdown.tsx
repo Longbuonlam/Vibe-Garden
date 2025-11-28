@@ -39,13 +39,13 @@ export default function CartDropdown() {
       {isOpen && (
         <div className="absolute right-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-lg z-50 max-h-96 flex flex-col">
           <div className="p-4 border-b border-border">
-            <h3 className="font-semibold text-foreground">Shopping Cart</h3>
+            <h3 className="font-semibold text-foreground">Giỏ hàng</h3>
           </div>
 
           <div className="flex-1 overflow-y-auto p-4">
             {items.length === 0 ? (
               <p className="text-sm text-muted-foreground text-center py-8">
-                Your cart is empty
+                Giỏ hàng của bạn đang trống
               </p>
             ) : (
               <div className="space-y-4">
@@ -71,7 +71,7 @@ export default function CartDropdown() {
                           onClick={() => removeItem(item.id)}
                           className="text-xs text-muted-foreground hover:text-foreground"
                         >
-                          Qty: {item.quantity}
+                          Số lượng: {item.quantity}
                         </button>
                       </div>
                     </div>
@@ -91,7 +91,7 @@ export default function CartDropdown() {
             <>
               <div className="border-t border-border p-4 space-y-3">
                 <div className="flex justify-between text-sm font-semibold">
-                  <span>Total:</span>
+                  <span>Tổng tiền:</span>
                   <span>{total.toFixed(3)}đ</span>
                 </div>
                 <Link
@@ -99,7 +99,7 @@ export default function CartDropdown() {
                   onClick={() => setIsOpen(false)}
                   className="block"
                 >
-                  <Button className="w-full">View Cart</Button>
+                  <Button className="w-full">Đặt hàng</Button>
                 </Link>
               </div>
             </>

@@ -154,17 +154,17 @@ export default function Checkout() {
 
   return (
     <div className="py-8">
-      <h1 className="text-3xl font-bold tracking-tight mb-8">Checkout</h1>
+      <h1 className="text-3xl font-bold tracking-tight mb-8">Thanh toán</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <form onSubmit={handleSubmit} className="lg:col-span-2 space-y-6">
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Shipping Information</h2>
+            <h2 className="text-xl font-semibold">Thông tin giao hàng</h2>
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
                 name="firstName"
-                placeholder="First Name"
+                placeholder="Họ"
                 value={formData.firstName}
                 onChange={handleChange}
                 disabled={isProcessing}
@@ -174,7 +174,7 @@ export default function Checkout() {
               <input
                 type="text"
                 name="lastName"
-                placeholder="Last Name"
+                placeholder="Tên"
                 value={formData.lastName}
                 onChange={handleChange}
                 disabled={isProcessing}
@@ -195,7 +195,7 @@ export default function Checkout() {
             <input
               type="tel"
               name="phone"
-              placeholder="Phone (Optional)"
+              placeholder="Số điện thoại"
               value={formData.phone}
               onChange={handleChange}
               disabled={isProcessing}
@@ -204,11 +204,11 @@ export default function Checkout() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Address</h2>
+            <h2 className="text-xl font-semibold">Địa chỉ</h2>
             <input
               type="text"
               name="address"
-              placeholder="Street Address"
+              placeholder="Số nhà, tên đường"
               value={formData.address}
               onChange={handleChange}
               disabled={isProcessing}
@@ -219,7 +219,7 @@ export default function Checkout() {
               <input
                 type="text"
                 name="city"
-                placeholder="City"
+                placeholder="Tỉnh/Thành phố"
                 value={formData.city}
                 onChange={handleChange}
                 disabled={isProcessing}
@@ -229,7 +229,7 @@ export default function Checkout() {
               <input
                 type="text"
                 name="state"
-                placeholder="State"
+                placeholder="Quận/Huyện"
                 value={formData.state}
                 onChange={handleChange}
                 disabled={isProcessing}
@@ -240,7 +240,7 @@ export default function Checkout() {
             <input
               type="text"
               name="zipCode"
-              placeholder="ZIP Code"
+              placeholder="Note bóng kính"
               value={formData.zipCode}
               onChange={handleChange}
               disabled={isProcessing}
@@ -257,10 +257,10 @@ export default function Checkout() {
               disabled={isProcessing}
               className="flex-1"
             >
-              Back to Cart
+              Quay lại giỏ hàng
             </Button>
             <Button type="submit" disabled={isProcessing} className="flex-1">
-              {isProcessing ? "Processing..." : "Place Order"}
+              {isProcessing ? "Đang xử lý..." : "Đặt hàng"}
               {!isProcessing && <ArrowRight className="ml-2 h-4 w-4" />}
             </Button>
           </div>
@@ -268,7 +268,7 @@ export default function Checkout() {
 
         <div className="lg:col-span-1">
           <div className="border border-border rounded-lg p-6 space-y-4 sticky top-24">
-            <h2 className="text-xl font-semibold">Order Summary</h2>
+            <h2 className="text-xl font-semibold">Thông tin đơn hàng</h2>
 
             <div className="space-y-3 max-h-48 overflow-y-auto border-t border-border pt-4">
               {items.map((item) => (
@@ -285,12 +285,12 @@ export default function Checkout() {
 
             <div className="border-t border-border pt-4 space-y-2">
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Subtotal:</span>
+                <span className="text-muted-foreground">Số tiền tạm tính:</span>
                 <span>{total.toFixed(3)}đ</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Shipping:</span>
-                <span>Free</span>
+                <span className="text-muted-foreground">Phí vận chuyển:</span>
+                <span>Miễn phí</span>
               </div>
               {/* <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Tax (10%):</span>
@@ -300,7 +300,7 @@ export default function Checkout() {
 
             <div className="border-t border-border pt-4">
               <div className="flex justify-between text-lg font-bold">
-                <span>Total:</span>
+                <span>Tổng tiền:</span>
                 <span>{(total).toFixed(3)}đ</span>
               </div>
             </div>

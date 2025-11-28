@@ -23,7 +23,7 @@ export default function ProductCard({ id, name, price, image }: Product) {
 
   const handleAddToCart = () => {
     addItem({ id, name, price, image });
-    toast.success(`${name} added to cart!`);
+    toast.success(`${name} đã được thêm vào giỏ hàng!`);
   };
 
   const handleIncrease = () => {
