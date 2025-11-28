@@ -100,12 +100,53 @@ export default function Checkout() {
     setIsProcessing(true);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      toast.success("Payment processed successfully!");
+      // Build request payload matching server `OrderRequestBody`
+      const subtotal = total;
+      const tax = +(total * 0.1).toFixed(2);
+      const finalTotal = +(total * 1.1).toFixed(2);
+
+      const payload = {
+        shippingInfo: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          city: formData.city,
+          district: formData.state, // server expects `district`
+          zipCode: formData.zipCode,
+        },
+        cartItems: items.map((it) => ({
+          id: it.id,
+          name: it.name,
+          price: it.price,
+          quantity: it.quantity,
+          image: it.image,
+        })),
+        subtotal,
+        tax,
+        total: finalTotal,
+      };
+
+      const resp = await fetch('/api/place-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await resp.json().catch(() => null);
+
+      if (!resp.ok || !data || data.success === false) {
+        const msg = data?.error || data?.message || 'Failed to place order';
+        throw new Error(msg);
+      }
+
+      toast.success('Order placed successfully!');
       clearCart();
       setOrderPlaced(true);
     } catch (error) {
-      toast.error("Payment failed. Please try again.");
+      const message = (error as any)?.message || 'Payment failed. Please try again.';
+      toast.error(message);
     } finally {
       setIsProcessing(false);
     }

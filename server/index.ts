@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import placeOrderRouter from "./routes/place-order";
 
 export function createServer() {
   const app = express();
@@ -18,6 +19,9 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Order placement route (sends email)
+  app.use('/api/place-order', placeOrderRouter);
 
   return app;
 }
