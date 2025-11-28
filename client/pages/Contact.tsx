@@ -9,6 +9,7 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -20,14 +21,42 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (isSubmitting) return; // prevent double submissions
+
     if (!formData.name || !formData.email || !formData.message) {
       toast.error("Please fill in all fields");
       return;
     }
-    toast.success("Message sent! We'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+
+    setIsSubmitting(true);
+    let success = false;
+    try {
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await resp.json().catch(() => null);
+
+      if (!resp.ok || !data || data.success === false) {
+        const msg = data?.error || data?.message || 'Failed to send message';
+        throw new Error(msg);
+      }
+
+      success = true;
+      toast.success("Message sent! We'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      const message = (err as any)?.message || 'Failed to send message';
+      toast.error(message);
+    } finally {
+      // only reset submitting flag if submission failed; otherwise keep as false to allow next sends
+      setIsSubmitting(false);
+    }
   };
 
   return (

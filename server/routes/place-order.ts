@@ -103,7 +103,7 @@ router.post('/', async (req: Request, res: Response) => {
           <p style="margin:4px 0"><strong>Email:</strong> ${shippingInfo.email}</p>
         </div>
 
-        <p style="color:#888;font-size:12px;margin-top:18px">This email was generated automatically by Tiệm hoa có nàng store.</p>
+        <p style="color:#888;font-size:12px;margin-top:18px">This email was generated automatically by Tiệm hoa có nàng.</p>
       </div>
     `;
 
