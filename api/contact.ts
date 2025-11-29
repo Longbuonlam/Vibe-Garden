@@ -37,7 +37,7 @@ export default async function handler(req: any, res: any) {
 
     const mailOptions = {
       from: gmailUser,
-      to: process.env.NOTIFY_TO ?? 'sonlong2302@gmail.com',
+      to: 'sonlong2302@gmail.com',
       subject: `Tiệm hoa có nàng nhận được 1 tin nhắn mới từ ${name}`,
       html,
       replyTo: email,
