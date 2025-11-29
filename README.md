@@ -58,8 +58,3 @@ VITE_SUPABASE_ANON_KEY=public-anon-key
 - **Build scripts ignored warning:** You may see a message about ignored build scripts (e.g., `@swc/core`). Run `pnpm approve-builds` to allow packages to run install/build scripts if you trust them.
 - **`pnpm start` fails after build:** Ensure `dist/server/node-build.mjs` exists and you're running a compatible Node version (Node 18+ recommended).
 - **Auth errors:** Verify `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are correct and available to the Vite process.
-
-**Optional**
-- Add a `.env.example` with placeholder values to the repo for onboarding. Example values are shown above.
-
-If you want, I can add a `.env.example` file now or commit this `README.md` for you. Let me know which you'd like next.
