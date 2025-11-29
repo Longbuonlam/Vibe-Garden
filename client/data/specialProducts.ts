@@ -22,24 +22,24 @@ export const products = [
       "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h003_i1xv3n.png",
   },
   {
-    id: "4",
-    name: "H004 (10 bông/ bó)",
-    price: 110,
+    id: "10",
+    name: "T004",
+    price: 500,
     image:
-      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h004_zq01xa.png",
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/t004_srp2ek.png",
   },
   {
-    id: "5",
-    name: "H005",
-    price: 100,
+    id: "11",
+    name: "T005",
+    price: 450,
     image:
-      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h005_qgnff5.png",
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/t005_ru12k0.png",
   },
   {
-    id: "6",
-    name: "H006",
-    price: 120,
+    id: "12",
+    name: "T006",
+    price: 800,
     image:
-      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/h006_pjqc2e.png",
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357875/t006_q4umrt.png",
   },
 ] as const;
