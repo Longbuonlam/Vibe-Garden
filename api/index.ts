@@ -1,35 +1,51 @@
-import { createServer } from '../server/index';
+import express from 'express';
 
-// Create the express app once and reuse across invocations
-let app: any;
+// Import API handlers that live inside the `api/` folder so Vercel bundles them.
+// These files export default request handlers compatible with (req,res).
+let placeOrderHandler: any;
+let contactHandler: any;
+let demoHandler: any;
 
 try {
-  app = createServer();
-} catch (initErr: any) {
-  // If initialization fails, log and keep app undefined — handler will return error
+  // Use relative imports so the builder includes these files in the function bundle
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  placeOrderHandler = require('./place-order').default;
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  contactHandler = require('./contact').default;
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  demoHandler = require('./demo').default;
+} catch (impErr: any) {
   // eslint-disable-next-line no-console
-  console.error('Failed to initialize Express app in serverless wrapper:', initErr);
+  console.error('Failed to require api handlers inside serverless wrapper:', impErr);
 }
 
-// Export a handler compatible with Vercel's Node builder
+// Build a minimal express app and mount the handlers under /api/* paths.
+const app = express();
+app.use(express.json());
+
+if (demoHandler) {
+  app.get('/api/demo', demoHandler);
+}
+
+if (contactHandler) {
+  app.post('/api/contact', contactHandler);
+}
+
+if (placeOrderHandler) {
+  app.post('/api/place-order', placeOrderHandler);
+}
+
+// Fallback route
+app.all('/api/*', (_req, res) => {
+  res.status(404).json({ success: false, error: 'API route not found' });
+});
+
 export default function handler(req: any, res: any) {
   try {
-    if (!app) {
-      const msg = 'Server not initialized';
-      // eslint-disable-next-line no-console
-      console.error(msg);
-      res.statusCode = 500;
-      res.setHeader('content-type', 'application/json');
-      res.end(JSON.stringify({ success: false, error: msg }));
-      return;
-    }
-
-    // Call the express app as a request handler
     return app(req, res);
   } catch (err: any) {
-    // Log error and return stack to help debugging (remove in production)
     // eslint-disable-next-line no-console
-    console.error('Unhandled error in serverless wrapper:', err);
+    console.error('Unhandled error in API wrapper invocation:', err);
     res.statusCode = 500;
     res.setHeader('content-type', 'application/json');
     res.end(JSON.stringify({ success: false, error: String(err), stack: err?.stack }));
