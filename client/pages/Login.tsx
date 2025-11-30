@@ -125,7 +125,7 @@ export default function Login() {
         aria-hidden
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1495653797063-114787b77b23?q=80&w=2070&auto=format&fit=crop)",
+            "url(https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/h002_yygrfl.png)",
         }}
       />
       <div
@@ -136,9 +136,9 @@ export default function Login() {
       <div className="relative mx-auto max-w-md rounded-xl border bg-card/90 backdrop-blur p-6 shadow-lg text-center">
         {mode === "choice" && (
           <>
-            <h1 className="text-2xl font-bold tracking-tight">Welcome</h1>
+            <h1 className="text-2xl font-bold tracking-tight">Xin chào</h1>
             <p className="mt-2 text-sm text-muted-foreground">
-              Sign in or create an account to continue to Petal & Stem.
+              Đăng nhập hoặc Đăng ký để tiếp tục tới cửa hàng
             </p>
             <div className="mt-6 grid gap-3">
               <Button
@@ -146,14 +146,14 @@ export default function Login() {
                 className="w-full"
                 variant="default"
               >
-                Login
+                Đăng nhập
               </Button>
               <Button
                 onClick={() => setMode("signup")}
                 className="w-full"
                 variant="outline"
               >
-                Sign Up
+                Đăng ký
               </Button>
             </div>
           </>
@@ -172,11 +172,11 @@ export default function Login() {
                 <ArrowLeft className="h-4 w-4" />
               </Button>
               <h1 className="text-2xl font-bold tracking-tight text-center">
-                Login
+                Đăng nhập
               </h1>
             </div>
             <p className="text-sm text-muted-foreground">
-              Sign in to your account
+              Đăng nhập vào tài khoản của bạn
             </p>
             <form onSubmit={handleLogin} className="mt-6 space-y-4">
               <input
@@ -189,14 +189,14 @@ export default function Login() {
               />
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Mật khẩu"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={loading}
                 className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? "Signing in..." : "Sign In"}
+                {loading ? "Đang đăng nhập..." : "Đăng nhập"}
               </Button>
             </form>
             <div className="mt-4 relative">
@@ -205,7 +205,7 @@ export default function Login() {
               </div>
               <div className="relative flex justify-center text-xs uppercase">
                 <span className="bg-card/90 px-2 text-muted-foreground">
-                  Or
+                  Hoặc
                 </span>
               </div>
             </div>
@@ -245,11 +245,11 @@ export default function Login() {
                 <ArrowLeft className="h-4 w-4" />
               </Button>
               <h1 className="text-2xl font-bold tracking-tight text-center">
-                Sign Up
+                Đăng ký
               </h1>
             </div>
             <p className="text-sm text-muted-foreground">
-              Create a new account
+              Tạo một tài khoản mới
             </p>
             <form onSubmit={handleSignUp} className="mt-6 space-y-4">
               <input
@@ -262,14 +262,14 @@ export default function Login() {
               />
               <input
                 type="password"
-                placeholder="Password (min 6 characters)"
+                placeholder="Mật khẩu (ít nhất 6 ký tự)"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={loading}
                 className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? "Creating account..." : "Create Account"}
+                {loading ? "Đang tạo tài khoản..." : "Tạo tài khoản"}
               </Button>
             </form>
             <div className="mt-4 relative">
@@ -278,7 +278,7 @@ export default function Login() {
               </div>
               <div className="relative flex justify-center text-xs uppercase">
                 <span className="bg-card/90 px-2 text-muted-foreground">
-                  Or
+                  Hoặc
                 </span>
               </div>
             </div>
