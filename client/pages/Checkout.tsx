@@ -128,7 +128,7 @@ export default function Checkout() {
         total: finalTotal,
       };
 
-      const resp = await fetch('/api/place-order', {
+      const resp = await fetch('https://vibe-garden.onrender.com/api/place-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

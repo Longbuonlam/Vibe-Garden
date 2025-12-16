@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ export default function Contact() {
     setIsSubmitting(true);
     let success = false;
     try {
-      const resp = await fetch('/api/contact', {
+      const resp = await fetch('https://vibe-garden.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -142,7 +142,7 @@ export default function Contact() {
 
           <div className="flex items-start justify-center md:items-center">
             <div className="flex flex-col w-full max-w-sm">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
                 <a
                   href="https://www.facebook.com/people/Ti%E1%BB%87m-hoa-c%C3%B3-n%C3%A0ng/61581625951395/"
                   target="_blank"
@@ -208,6 +208,45 @@ export default function Contact() {
                     </span>
                   </div>
                 </a>
+
+                <a
+                  href="mailto:tiemhoaconang@gmail.com"
+                  className="group"
+                >
+                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                    <Mail className="h-6 w-6 text-foreground" />
+                    <div className="flex flex-col">
+                      <span className="text-base font-medium text-foreground">
+                        tiemhoaconang@gmail.com
+                      </span>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:0902189216"
+                  className="group"
+                >
+                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                    <Phone className="h-6 w-6 text-foreground" />
+                    <div className="flex flex-col">
+                      <span className="text-base font-medium text-foreground">
+                        0902189216
+                      </span>
+                    </div>
+                  </div>
+                </a>
+
+                <div className="group">
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-default">
+                    <MapPin className="h-6 w-6 text-foreground flex-shrink-0 mt-0.5" />
+                    <div className="flex flex-col">
+                      <span className="text-base font-medium text-foreground">
+                        Số nhà 21, ngõ 92, đường Chùa Võ, Dương Nội, Hà Nội
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
