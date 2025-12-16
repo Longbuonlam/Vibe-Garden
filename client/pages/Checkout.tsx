@@ -10,6 +10,7 @@ export default function Checkout() {
   const { items, total, clearCart } = useCart();
   const [isProcessing, setIsProcessing] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [orderTotal, setOrderTotal] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -57,7 +58,7 @@ export default function Checkout() {
             <div>
               <p className="text-muted-foreground">Tổng số tiền:</p>
               <p className="font-semibold text-lg">
-                {(total).toFixed(3)}đ
+                {orderTotal.toFixed(3)}đ
               </p>
             </div>
             <div>
@@ -142,6 +143,7 @@ export default function Checkout() {
       }
 
       toast.success('Order placed successfully!');
+      setOrderTotal(finalTotal);
       clearCart();
       setOrderPlaced(true);
     } catch (error) {
