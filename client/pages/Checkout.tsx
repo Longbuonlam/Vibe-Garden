@@ -26,9 +26,9 @@ export default function Checkout() {
       <div className="min-h-screen flex items-center justify-center py-12">
         <div className="text-center space-y-4">
           <h1 className="text-3xl font-bold tracking-tight">
-            Your Cart is Empty
+            Giỏ hàng của bạn đang trống
           </h1>
-          <Button onClick={() => navigate("/shop")}>Back to Shop</Button>
+          <Button onClick={() => navigate("/shop")}>Quay lại cửa hàng</Button>
         </div>
       </div>
     );
@@ -42,34 +42,34 @@ export default function Checkout() {
             <CheckCircle className="h-16 w-16 text-green-600" />
           </div>
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">Order Placed!</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Đơn hàng đã được đặt!</h1>
             <p className="text-lg text-muted-foreground">
-              Your beautiful flowers are on their way!
+              Hoa đẹp của bạn đang trên đường đến!
             </p>
           </div>
           <div className="bg-card border border-border rounded-lg p-4 space-y-2 text-sm text-left">
             <div>
-              <p className="text-muted-foreground">Order Number:</p>
+              <p className="text-muted-foreground">Mã đơn hàng:</p>
               <p className="font-semibold">
                 #ORD{Math.floor(Math.random() * 1000000)}
               </p>
             </div>
             <div>
-              <p className="text-muted-foreground">Total Amount:</p>
+              <p className="text-muted-foreground">Tổng số tiền:</p>
               <p className="font-semibold text-lg">
-                ${(total * 1.1).toFixed(2)}
+                {(total).toFixed(3)}đ
               </p>
             </div>
             <div>
-              <p className="text-muted-foreground">Estimated Delivery:</p>
-              <p className="font-semibold">2-3 Business Days</p>
+              <p className="text-muted-foreground">Thời gian giao hàng:</p>
+              <p className="font-semibold">2-3 Ngày</p>
             </div>
           </div>
           <p className="text-sm text-muted-foreground">
-            You'll receive an email confirmation shortly with tracking details.
+            Bạn sẽ nhận được email xác nhận với chi tiết đơn hàng của mình.
           </p>
           <Button onClick={() => navigate("/")} className="w-full">
-            Continue Shopping
+            Tiếp tục mua sắm
           </Button>
         </div>
       </div>
