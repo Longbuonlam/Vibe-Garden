@@ -104,7 +104,7 @@ export default function Checkout() {
       // Build request payload matching server `OrderRequestBody`
       const subtotal = total;
       const tax = +(total * 0.1).toFixed(2);
-      const finalTotal = +(total * 1.1).toFixed(2);
+      const finalTotal = total;
 
       const payload = {
         shippingInfo: {
