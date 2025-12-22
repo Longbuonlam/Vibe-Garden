@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
 import { useMemo } from "react";
+import { NavLink } from "react-router-dom";
 
 export interface Product {
   id: string;
@@ -39,21 +40,23 @@ export default function ProductCard({ id, name, price, image }: Product) {
   };
 
   return (
-    <Card className="overflow-hidden group">
-      <div className="aspect-square w-full overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          loading="lazy"
-        />
-      </div>
+    <Card className="overflow-hidden group cursor-pointer">
+      <NavLink to={`/product?id=${id}`} className="block">
+        <div className="aspect-square w-full overflow-hidden">
+          <img
+            src={image}
+            alt={name}
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+      </NavLink>
       <CardContent className="p-4">
         <div className="flex items-start justify-between gap-3">
-          <div>
+          <NavLink to={`/product?id=${id}`} className="block flex-1 hover:text-primary transition-colors">
             <h3 className="font-semibold text-base">{name}</h3>
             <p className="text-sm text-muted-foreground">{price.toFixed(3)}đ</p>
-          </div>
+          </NavLink>
           {!cartItem ? (
             <Button size="sm" onClick={handleAddToCart}>
               Thêm vào giỏ
