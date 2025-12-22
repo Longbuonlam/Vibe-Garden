@@ -341,7 +341,7 @@ export default function ProductDetail() {
         <div className="container py-12 md:py-16">
           <div className="space-y-8">
             {/* Section Header */}
-            <div className="border-b pb-6">
+            <div className="pb-6">
               <h2 className="text-2xl font-bold" style={{ color: "#C08A92" }}>
                 Đánh giá từ khách hàng
               </h2>
