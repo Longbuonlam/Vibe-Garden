@@ -23,7 +23,7 @@ interface Product {
 
 const MOCK_DB: Product[] = [
   {
-    id: "H001",
+    id: "1",
     name: "H001 (15 bông/ bó)",
     price: 80000,
     description:
@@ -32,7 +32,7 @@ const MOCK_DB: Product[] = [
       "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h001_kbrakv.png",
   },
   {
-    id: "H002",
+    id: "2",
     name: "H002 (10 bông/ bó)",
     price: 100000,
     description:
@@ -41,7 +41,7 @@ const MOCK_DB: Product[] = [
       "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/h002_yygrfl.png",
   },
   {
-    id: "H003",
+    id: "3",
     name: "H003 (10 bông/ bó)",
     price: 100000,
     description:
