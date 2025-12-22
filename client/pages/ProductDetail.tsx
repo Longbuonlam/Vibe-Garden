@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
+import { Star } from "lucide-react";
 
 interface Product {
   id: string;
@@ -19,6 +20,14 @@ interface Product {
   price: number;
   description: string;
   image_url: string;
+}
+
+interface Review {
+  avatar_url: string;
+  user_name: string;
+  created_at: string;
+  rating: number;
+  comment: string;
 }
 
 const MOCK_DB: Product[] = [
@@ -50,6 +59,140 @@ const MOCK_DB: Product[] = [
       "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h003_i1xv3n.png",
   },
 ];
+
+const MOCK_REVIEWS: Review[] = [
+  {
+    avatar_url: "https://api.dicebear.com/7.x/avataaars/svg?seed=Anna",
+    user_name: "Anna Nguyễn",
+    created_at: "20/12/2024",
+    rating: 5,
+    comment:
+      "Hoa rất tươi và đẹp! Giao hàng nhanh chóng, bó hoa được đóng gói cẩn thận. Tôi sẽ quay lại mua lần nữa!",
+  },
+  {
+    avatar_url: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
+    user_name: "Marcus Trần",
+    created_at: "18/12/2024",
+    rating: 5,
+    comment:
+      "Tuyệt vời! Bó hoa chính xác như trong hình ảnh. Tình yêu của tôi rất hài lòng. Cảm ơn Tiệm hoa Có Nàng!",
+  },
+];
+
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <div className="flex items-center gap-1">
+      {[...Array(5)].map((_, i) => (
+        <Star
+          key={i}
+          size={16}
+          className={i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}
+        />
+      ))}
+    </div>
+  );
+}
+
+function ReviewItem({ review }: { review: Review }) {
+  return (
+    <Card className="p-6 border">
+      <div className="flex gap-4">
+        <img
+          src={review.avatar_url}
+          alt={review.user_name}
+          className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+        />
+        <div className="flex-1">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="font-semibold text-foreground">{review.user_name}</p>
+              <p className="text-xs text-muted-foreground">{review.created_at}</p>
+            </div>
+          </div>
+          <div className="mt-2">
+            <StarRating rating={review.rating} />
+          </div>
+          <p className="mt-3 text-sm text-foreground leading-relaxed">
+            {review.comment}
+          </p>
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+function WriteReviewForm() {
+  const [rating, setRating] = useState(5);
+  const [comment, setComment] = useState("");
+
+  const handleSubmit = () => {
+    toast.success("Cảm ơn bạn đã gửi đánh giá!");
+    setRating(5);
+    setComment("");
+  };
+
+  return (
+    <Card className="p-6 border">
+      <h3 className="text-lg font-semibold text-foreground mb-6">
+        Gửi đánh giá của bạn
+      </h3>
+
+      <div className="space-y-6">
+        {/* Rating Input */}
+        <div>
+          <label className="text-sm font-medium text-foreground block mb-3">
+            Đánh giá của bạn
+          </label>
+          <div className="flex items-center gap-4">
+            <div className="flex gap-2">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <button
+                  key={star}
+                  onClick={() => setRating(star)}
+                  className="focus:outline-none transition-transform hover:scale-110"
+                >
+                  <Star
+                    size={28}
+                    className={
+                      star <= rating
+                        ? "fill-yellow-400 text-yellow-400"
+                        : "text-gray-300"
+                    }
+                  />
+                </button>
+              ))}
+            </div>
+            <span className="text-sm text-muted-foreground">{rating}/5</span>
+          </div>
+        </div>
+
+        {/* Comment Input */}
+        <div>
+          <label className="text-sm font-medium text-foreground block mb-3">
+            Bình luận
+          </label>
+          <textarea
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            placeholder="Chia sẻ cảm nhận..."
+            rows={5}
+            className="w-full px-4 py-3 border rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#C08A92] focus:ring-opacity-50 resize-none"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <Button
+          onClick={handleSubmit}
+          size="lg"
+          className="w-full"
+          style={{ backgroundColor: "#C08A92" }}
+        >
+          Gửi đánh giá
+        </Button>
+      </div>
+    </Card>
+  );
+}
 
 export default function ProductDetail() {
   const [searchParams] = useSearchParams();
@@ -188,6 +331,32 @@ export default function ProductDetail() {
               <p>✓ Hoa tươi, được chọn lọc tỉ mỉ</p>
               <p>✓ Giao hàng nhanh chóng</p>
               <p>✓ Hỗ trợ khách hàng 24/7</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="border-t bg-background">
+        <div className="container py-12 md:py-16">
+          <div className="space-y-8">
+            {/* Section Header */}
+            <div className="border-b pb-6">
+              <h2 className="text-2xl font-bold" style={{ color: "#C08A92" }}>
+                Đánh giá từ khách hàng
+              </h2>
+            </div>
+
+            {/* Review List */}
+            <div className="space-y-6">
+              {MOCK_REVIEWS.map((review, idx) => (
+                <ReviewItem key={idx} review={review} />
+              ))}
+            </div>
+
+            {/* Write Review Form */}
+            <div className="pt-6 border-t">
+              <WriteReviewForm />
             </div>
           </div>
         </div>
