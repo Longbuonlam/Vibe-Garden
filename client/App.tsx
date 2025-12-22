@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import ProductDetail from "./pages/ProductDetail";
 import Layout from "./components/site/Layout";
 import RequireAuth from "./auth/RequireAuth";
 import { AuthProvider } from "./auth/AuthContext";
@@ -41,6 +42,7 @@ export default function App() {
                     }
                   />
                   <Route path="/shop" element={<Shop />} />
+                  <Route path="/product" element={<ProductDetail />} />
                   <Route
                     path="/cart"
                     element={
