@@ -337,7 +337,7 @@ export default function ProductDetail() {
       </section>
 
       {/* Reviews Section */}
-      <section className="border-t bg-background">
+      <section className="bg-background">
         <div className="container py-12 md:py-16">
           <div className="space-y-8">
             {/* Section Header */}
