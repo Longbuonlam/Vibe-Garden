@@ -348,7 +348,7 @@ export default function ProductDetail() {
             </div>
 
             {/* Review List */}
-            <div className="space-y-4">
+            <div className="space-y-6">
               {MOCK_REVIEWS.map((review, idx) => (
                 <ReviewItem key={idx} review={review} />
               ))}
