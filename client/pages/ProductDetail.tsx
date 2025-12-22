@@ -86,7 +86,9 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={i}
           size={16}
-          className={i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}
+          className={
+            i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+          }
         />
       ))}
     </div>
@@ -105,8 +107,12 @@ function ReviewItem({ review }: { review: Review }) {
         <div className="flex-1">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <p className="font-semibold text-foreground">{review.user_name}</p>
-              <p className="text-xs text-muted-foreground">{review.created_at}</p>
+              <p className="font-semibold text-foreground">
+                {review.user_name}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {review.created_at}
+              </p>
             </div>
           </div>
           <div className="mt-2">
@@ -271,11 +277,17 @@ export default function ProductDetail() {
             </div>
 
             {/* Divider */}
-            <div className="w-12 h-1" style={{ backgroundColor: "#C08A92" }}></div>
+            <div
+              className="w-12 h-1"
+              style={{ backgroundColor: "#C08A92" }}
+            ></div>
 
             {/* Price */}
             <div>
-              <p className="text-2xl md:text-3xl font-bold" style={{ color: "#C08A92" }}>
+              <p
+                className="text-2xl md:text-3xl font-bold"
+                style={{ color: "#C08A92" }}
+              >
                 {product.price.toLocaleString("vi-VN")}đ
               </p>
             </div>
@@ -303,7 +315,9 @@ export default function ProductDetail() {
                     type="number"
                     min="1"
                     value={quantity}
-                    onChange={(e) => handleQuantityChange(parseInt(e.target.value) || 1)}
+                    onChange={(e) =>
+                      handleQuantityChange(parseInt(e.target.value) || 1)
+                    }
                     className="w-12 text-center border-l border-r outline-none"
                   />
                   <button

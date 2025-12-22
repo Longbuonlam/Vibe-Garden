@@ -53,7 +53,10 @@ export default function ProductCard({ id, name, price, image }: Product) {
       </NavLink>
       <CardContent className="p-4">
         <div className="flex items-start justify-between gap-3">
-          <NavLink to={`/product?id=${id}`} className="block flex-1 hover:text-primary transition-colors">
+          <NavLink
+            to={`/product?id=${id}`}
+            className="block flex-1 hover:text-primary transition-colors"
+          >
             <h3 className="font-semibold text-base">{name}</h3>
             <p className="text-sm text-muted-foreground">{price.toFixed(3)}đ</p>
           </NavLink>
