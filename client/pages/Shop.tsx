@@ -42,11 +42,17 @@ export default function Shop() {
   const getVisibleProducts = (
     currentIndex: number,
     source: readonly Product[] = products as readonly Product[],
-  ) => source.slice(currentIndex, currentIndex + ITEMS_PER_VIEW) as readonly Product[];
+  ) =>
+    source.slice(
+      currentIndex,
+      currentIndex + ITEMS_PER_VIEW,
+    ) as readonly Product[];
 
   const canShowPrevious = (currentIndex: number) => currentIndex > 0;
-  const canShowNext = (currentIndex: number, source: readonly Product[] = products as readonly Product[]) =>
-    currentIndex + ITEMS_PER_VIEW < source.length;
+  const canShowNext = (
+    currentIndex: number,
+    source: readonly Product[] = products as readonly Product[],
+  ) => currentIndex + ITEMS_PER_VIEW < source.length;
 
   const filteredProductsFirst = useMemo(
     () =>
@@ -64,8 +70,14 @@ export default function Shop() {
     [searchQuery],
   );
 
-  const visibleProductsFirst = getVisibleProducts(currentIndexFirst, filteredProductsFirst as readonly Product[]);
-  const visibleProductsSecond = getVisibleProducts(currentIndexSecond, filteredProductsSecond as readonly Product[]);
+  const visibleProductsFirst = getVisibleProducts(
+    currentIndexFirst,
+    filteredProductsFirst as readonly Product[],
+  );
+  const visibleProductsSecond = getVisibleProducts(
+    currentIndexSecond,
+    filteredProductsSecond as readonly Product[],
+  );
 
   return (
     <div className="space-y-12 mt-16 mb-20">
@@ -105,7 +117,12 @@ export default function Shop() {
               variant="outline"
               size="icon"
               className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-              onClick={() => handlePrevious(setCurrentIndexFirst, filteredProductsFirst as readonly Product[])}
+              onClick={() =>
+                handlePrevious(
+                  setCurrentIndexFirst,
+                  filteredProductsFirst as readonly Product[],
+                )
+              }
               disabled={!canShowPrevious(currentIndexFirst)}
             >
               <ChevronLeft className="h-6 w-6" />
@@ -115,8 +132,18 @@ export default function Shop() {
               variant="outline"
               size="icon"
               className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-              onClick={() => handleNext(setCurrentIndexFirst, filteredProductsFirst as readonly Product[])}
-              disabled={!canShowNext(currentIndexFirst, filteredProductsFirst as readonly Product[])}
+              onClick={() =>
+                handleNext(
+                  setCurrentIndexFirst,
+                  filteredProductsFirst as readonly Product[],
+                )
+              }
+              disabled={
+                !canShowNext(
+                  currentIndexFirst,
+                  filteredProductsFirst as readonly Product[],
+                )
+              }
             >
               <ChevronRight className="h-6 w-6" />
             </Button>
@@ -136,7 +163,12 @@ export default function Shop() {
               variant="outline"
               size="icon"
               className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-              onClick={() => handlePrevious(setCurrentIndexSecond, filteredProductsSecond as readonly Product[])}
+              onClick={() =>
+                handlePrevious(
+                  setCurrentIndexSecond,
+                  filteredProductsSecond as readonly Product[],
+                )
+              }
               disabled={!canShowPrevious(currentIndexSecond)}
             >
               <ChevronLeft className="h-6 w-6" />
@@ -146,8 +178,18 @@ export default function Shop() {
               variant="outline"
               size="icon"
               className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background border-2 hover:bg-accent"
-              onClick={() => handleNext(setCurrentIndexSecond, filteredProductsSecond as readonly Product[])}
-              disabled={!canShowNext(currentIndexSecond, filteredProductsSecond as readonly Product[])}
+              onClick={() =>
+                handleNext(
+                  setCurrentIndexSecond,
+                  filteredProductsSecond as readonly Product[],
+                )
+              }
+              disabled={
+                !canShowNext(
+                  currentIndexSecond,
+                  filteredProductsSecond as readonly Product[],
+                )
+              }
             >
               <ChevronRight className="h-6 w-6" />
             </Button>
