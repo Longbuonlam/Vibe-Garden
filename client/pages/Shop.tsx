@@ -81,7 +81,7 @@ export default function Shop() {
         <div className="relative w-full max-w-[500px]">
           <input
             type="text"
-            placeholder="Tìm kiếm hoa..."
+            placeholder="Tìm kiếm sản phẩm..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full px-4 py-3 pr-12 rounded-full border-2 bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#C08A92] focus:ring-opacity-50 transition-all"
