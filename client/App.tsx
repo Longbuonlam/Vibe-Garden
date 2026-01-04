@@ -18,6 +18,7 @@ import Layout from "./components/site/Layout";
 import RequireAuth from "./auth/RequireAuth";
 import { AuthProvider } from "./auth/AuthContext";
 import { CartProvider } from "./context/CartContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ export default function App() {
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <AuthProvider>
               <Routes>
                 <Route path="/login" element={<Login />} />

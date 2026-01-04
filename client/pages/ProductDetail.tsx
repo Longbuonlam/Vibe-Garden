@@ -34,7 +34,7 @@ const MOCK_DB: Product[] = [
   {
     id: "1",
     name: "H001 (15 bông/ bó)",
-    price: 80000,
+    price: 80,
     description:
       "Bó hoa tươi mới với 15 bông hoa được chọn lọc tỉ mỉ, mang đến vẻ đẹp tự nhiên và thanh lịch. Phù hợp cho các dịp đặc biệt hay chỉ để trang trí không gian sống của bạn.",
     image_url:
@@ -43,7 +43,7 @@ const MOCK_DB: Product[] = [
   {
     id: "2",
     name: "H002 (10 bông/ bó)",
-    price: 100000,
+    price: 100,
     description:
       "Bó hoa thanh nhã với 10 bông hoa lựa chọn, đơn giản nhưng tinh tế. Thích hợp để gửi tặng người thân hoặc làm quà tặng sinh nhật.",
     image_url:
@@ -52,11 +52,101 @@ const MOCK_DB: Product[] = [
   {
     id: "3",
     name: "H003 (10 bông/ bó)",
-    price: 100000,
+    price: 100,
     description:
       "Tuyển tập những bông hoa tinh tế với thiết kế tối giản, thích hợp cho không gian hiện đại. Mỗi bó là một câu chuyện được kể qua sắc hoa.",
     image_url:
       "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h003_i1xv3n.png",
+  },
+  {
+    id: "4",
+    name: "H004 (10 bông/ bó)",
+    price: 110,
+    description:
+      "Bó hoa độc đáo với 10 bông hoa được phối hợp hài hòa, mang đến vẻ đẹp rực rỡ và sống động. Lựa chọn hoàn hảo để làm nổi bật không gian của bạn.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h004_zq01xa.png",
+  },
+  {
+    id: "5",
+    name: "H005",
+    price: 100,
+    description:
+      "Bó hoa đa dạng với sự kết hợp của nhiều loại hoa khác nhau, tạo nên một tổng thể hài hòa và bắt mắt. Phù hợp cho mọi dịp lễ và sự kiện.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357873/h005_qgnff5.png",
+  },
+  {
+    id: "6",
+    name: "H006",
+    price: 120,
+    description:
+      "Bó hoa sang trọng với thiết kế tinh xảo, mang đến vẻ đẹp quý phái và đẳng cấp. Lựa chọn lý tưởng để thể hiện tình cảm và sự trân trọng đối với người nhận.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/h006_pjqc2e.png",
+  },
+  {
+    id: "7",
+    name: "T001",
+    price: 20,
+    description:
+      "Bó hoa tươi nhỏ gọn với thiết kế đơn giản, thích hợp để làm quà tặng hoặc trang trí bàn làm việc. Mỗi bông hoa được chọn lựa kỹ càng để đảm bảo độ tươi và đẹp.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/t001_jl9xzv.png",
+  },
+  {
+    id: "8",
+    name: "T002",
+    price: 180,
+    description:
+      "Bó hoa tươi với thiết kế tinh tế, mang đến vẻ đẹp tự nhiên và thanh lịch. Phù hợp cho các dịp đặc biệt hay chỉ để trang trí không gian sống của bạn.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/t002_muf0q6.png",
+  },
+  {
+    id: "9",
+    name: "T003",
+    price: 250,
+    description:
+      "Bó hoa tươi rực rỡ với sự kết hợp của nhiều loại hoa khác nhau, tạo nên một tổng thể hài hòa và bắt mắt. Phù hợp cho mọi dịp lễ và sự kiện.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/t003_udzmqo.png",
+  },
+  {
+    id: "10",
+    name: "T004",
+    price: 500,
+    description:
+      "Bó hoa tươi sang trọng với thiết kế tinh xảo, mang đến vẻ đẹp quý phái và đẳng cấp. Lựa chọn lý tưởng để thể hiện tình cảm và sự trân trọng đối với người nhận.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/t004_srp2ek.png",
+  },
+  {
+    id: "11",
+    name: "T005",
+    price: 450,
+    description:
+      "Bó hoa tươi độc đáo với 10 bông hoa được phối hợp hài hòa, mang đến vẻ đẹp rực rỡ và sống động. Lựa chọn hoàn hảo để làm nổi bật không gian của bạn.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357874/t005_ru12k0.png",
+  },
+  {
+    id: "12",
+    name: "T006",
+    price: 800,
+    description:
+      "Bó hoa tươi lớn với thiết kế ấn tượng, thích hợp cho các sự kiện quan trọng hoặc làm quà tặng đặc biệt. Mỗi bông hoa được chăm sóc kỹ lưỡng để đảm bảo độ tươi lâu.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357875/t006_q4umrt.png",
+  },
+  {
+    id: "13",
+    name: "T007",
+    price: 850,
+    description:
+      "Bó hoa tươi cao cấp với sự kết hợp tinh tế của các loại hoa quý, mang đến vẻ đẹp sang trọng và đẳng cấp. Lựa chọn hoàn hảo để thể hiện tình cảm sâu sắc và sự trân trọng.",
+    image_url:
+      "https://res.cloudinary.com/djoyvs0e3/image/upload/v1764357875/t007_wti3jo.png",
   },
 ];
 
@@ -128,12 +218,16 @@ function ReviewItem({ review }: { review: Review }) {
 }
 
 function WriteReviewForm() {
-  const [rating, setRating] = useState(5);
+  const [selectedRating, setSelectedRating] = useState(0);
+  const [hoveredRating, setHoveredRating] = useState(0);
   const [comment, setComment] = useState("");
+
+  // Display hovered rating if hovering, otherwise display selected rating
+  const displayRating = hoveredRating || selectedRating;
 
   const handleSubmit = () => {
     toast.success("Cảm ơn bạn đã gửi đánh giá!");
-    setRating(5);
+    setSelectedRating(0);
     setComment("");
   };
 
@@ -150,17 +244,21 @@ function WriteReviewForm() {
             Đánh giá của bạn
           </label>
           <div className="flex items-center gap-4">
-            <div className="flex gap-2">
+            <div
+              className="flex gap-2"
+              onMouseLeave={() => setHoveredRating(0)}
+            >
               {[1, 2, 3, 4, 5].map((star) => (
                 <button
                   key={star}
-                  onClick={() => setRating(star)}
+                  onClick={() => setSelectedRating(star)}
+                  onMouseEnter={() => setHoveredRating(star)}
                   className="focus:outline-none transition-transform hover:scale-110"
                 >
                   <Star
                     size={28}
                     className={
-                      star <= rating
+                      star <= displayRating
                         ? "fill-yellow-400 text-yellow-400"
                         : "text-gray-300"
                     }
@@ -168,7 +266,9 @@ function WriteReviewForm() {
                 </button>
               ))}
             </div>
-            <span className="text-sm text-muted-foreground">{rating}/5</span>
+            <span className="text-sm text-muted-foreground">
+              {displayRating}/5
+            </span>
           </div>
         </div>
 
@@ -288,7 +388,7 @@ export default function ProductDetail() {
                 className="text-2xl md:text-3xl font-bold"
                 style={{ color: "#C08A92" }}
               >
-                {product.price.toLocaleString("vi-VN")}đ
+                {product.price.toFixed(3)}đ
               </p>
             </div>
 
