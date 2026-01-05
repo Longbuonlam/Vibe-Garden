@@ -75,7 +75,11 @@ export default function Index() {
                 Chính sách giao hàng
               </NavLink>
             </li>
-            <li className="text-foreground">Chính sách đổi trả và hoàn tiền</li>
+            <li className="text-foreground">
+              <NavLink to="/policy/return-refund" className="hover:text-primary transition-colors">
+                Chính sách đổi trả và hoàn tiền
+              </NavLink>
+            </li>
             <li className="text-foreground">Nghĩa vụ của người bán và khách hàng</li>
           </ul>
         </div>
