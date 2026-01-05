@@ -15,9 +15,7 @@ export default function ShoppingGuide() {
                 1
               </div>
               <div>
-                <h2 className="text-lg font-semibold mb-2">
-                  Chọn sản phẩm
-                </h2>
+                <h2 className="text-lg font-semibold mb-2">Chọn sản phẩm</h2>
                 <p>
                   Chọn loại hoa muốn mua, chọn số lượng, nhấn thêm vào giỏ hàng
                 </p>
@@ -33,9 +31,7 @@ export default function ShoppingGuide() {
                 <h2 className="text-lg font-semibold mb-2">
                   Truy cập giỏ hàng
                 </h2>
-                <p>
-                  Nhấn xem giỏ hàng, tiếp tục nhấn chọn Đặt Hàng
-                </p>
+                <p>Nhấn xem giỏ hàng, tiếp tục nhấn chọn Đặt Hàng</p>
               </div>
             </div>
 
@@ -49,7 +45,8 @@ export default function ShoppingGuide() {
                   Kiểm tra thông tin
                 </h2>
                 <p>
-                  Người dùng kiểm tra lại thông tin sản phẩm và số lượng sản phẩm, sau đó chọn Tiến Hành Đặt Hàng
+                  Người dùng kiểm tra lại thông tin sản phẩm và số lượng sản
+                  phẩm, sau đó chọn Tiến Hành Đặt Hàng
                 </p>
               </div>
             </div>
@@ -63,9 +60,7 @@ export default function ShoppingGuide() {
                 <h2 className="text-lg font-semibold mb-2">
                   Nhập thông tin giao hàng
                 </h2>
-                <p>
-                  Người dùng nhập thông tin giao hàng và địa chỉ giao hàng
-                </p>
+                <p>Người dùng nhập thông tin giao hàng và địa chỉ giao hàng</p>
               </div>
             </div>
 
@@ -78,9 +73,7 @@ export default function ShoppingGuide() {
                 <h2 className="text-lg font-semibold mb-2">
                   Hoàn tất đặt hàng
                 </h2>
-                <p>
-                  Người dùng nhấn Đặt Hàng
-                </p>
+                <p>Người dùng nhấn Đặt Hàng</p>
               </div>
             </div>
           </div>

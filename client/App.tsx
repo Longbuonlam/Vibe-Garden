@@ -73,11 +73,20 @@ export default function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/policy/payment" element={<PaymentPolicy />} />
-                  <Route path="/policy/inspection" element={<InspectionPolicy />} />
+                  <Route
+                    path="/policy/inspection"
+                    element={<InspectionPolicy />}
+                  />
                   <Route path="/policy/privacy" element={<PrivacyPolicy />} />
                   <Route path="/policy/delivery" element={<DeliveryPolicy />} />
-                  <Route path="/policy/return-refund" element={<ReturnRefundPolicy />} />
-                  <Route path="/policy/obligations" element={<SellerBuyerObligations />} />
+                  <Route
+                    path="/policy/return-refund"
+                    element={<ReturnRefundPolicy />}
+                  />
+                  <Route
+                    path="/policy/obligations"
+                    element={<SellerBuyerObligations />}
+                  />
                   <Route path="/guide/shopping" element={<ShoppingGuide />} />
                   <Route path="/guide/payment" element={<PaymentGuide />} />
                   <Route path="/faqs" element={<FAQs />} />

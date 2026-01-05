@@ -15,7 +15,11 @@ export default function PrivacyPolicy() {
                 1. Mục đích và phạm vi thu thập thông tin
               </h2>
               <p>
-                Việc thu thập dữ liệu trên website bao gồm: Họ tên, email, điện thoại, địa chỉ khách hàng trong mục liên hệ và giỏ hàng. Đây là các thông tin mà Tiệm hoa Có Nàng cần khách hàng cung cấp đầy đủ khi muốn mua sản phẩm để chúng tôi có thể liên hệ xác nhận lại nhằm đảm bảo quyền lợi cho khách hàng.
+                Việc thu thập dữ liệu trên website bao gồm: Họ tên, email, điện
+                thoại, địa chỉ khách hàng trong mục liên hệ và giỏ hàng. Đây là
+                các thông tin mà Tiệm hoa Có Nàng cần khách hàng cung cấp đầy đủ
+                khi muốn mua sản phẩm để chúng tôi có thể liên hệ xác nhận lại
+                nhằm đảm bảo quyền lợi cho khách hàng.
               </p>
             </div>
 
@@ -25,15 +29,23 @@ export default function PrivacyPolicy() {
                 2. Phạm vi sử dụng thông tin
               </h2>
               <p className="mb-4">
-                Những thông tin mà khách hàng cung cấp sẽ được sử dụng vào mục đích:
+                Những thông tin mà khách hàng cung cấp sẽ được sử dụng vào mục
+                đích:
               </p>
               <ul className="space-y-2 ml-4">
                 <li>– Hỗ trợ hoàn thành giao dịch mua hoa và quà tặng.</li>
-                <li>– Giải quyết khiếu nại, thắc mắc hoặc tư vấn về sản phẩm.</li>
-                <li>– Cung cấp thông tin về các chương trình khuyến mãi, sản phẩm mới (nếu khách hàng đăng ký nhận tin).</li>
+                <li>
+                  – Giải quyết khiếu nại, thắc mắc hoặc tư vấn về sản phẩm.
+                </li>
+                <li>
+                  – Cung cấp thông tin về các chương trình khuyến mãi, sản phẩm
+                  mới (nếu khách hàng đăng ký nhận tin).
+                </li>
               </ul>
               <p className="mt-4">
-                Chúng tôi cam kết không sử dụng thông tin cá nhân của khách hàng ngoài mục đích xác nhận và liên hệ có liên quan đến giao dịch tại Tiệm hoa Có Nàng.
+                Chúng tôi cam kết không sử dụng thông tin cá nhân của khách hàng
+                ngoài mục đích xác nhận và liên hệ có liên quan đến giao dịch
+                tại Tiệm hoa Có Nàng.
               </p>
             </div>
 
@@ -43,7 +55,9 @@ export default function PrivacyPolicy() {
                 3. Thời gian lưu trữ thông tin
               </h2>
               <p>
-                Thông tin cá nhân của khách hàng sẽ được lưu trữ cho đến khi khách hàng có yêu cầu hủy bỏ. Còn lại trong mọi trường hợp thông tin cá nhân sẽ được bảo mật trên máy chủ của Tiệm hoa Có Nàng.
+                Thông tin cá nhân của khách hàng sẽ được lưu trữ cho đến khi
+                khách hàng có yêu cầu hủy bỏ. Còn lại trong mọi trường hợp thông
+                tin cá nhân sẽ được bảo mật trên máy chủ của Tiệm hoa Có Nàng.
               </p>
             </div>
 
@@ -54,7 +68,9 @@ export default function PrivacyPolicy() {
               </h2>
               <ul className="space-y-2 ml-4">
                 <li>– Tiệm hoa Có Nàng</li>
-                <li>– Địa chỉ: Số nhà 21, ngõ 92, đường Chùa Võ, Dương Nội, Hà Nội</li>
+                <li>
+                  – Địa chỉ: Số nhà 21, ngõ 92, đường Chùa Võ, Dương Nội, Hà Nội
+                </li>
                 <li>– Hotline: 0902189216</li>
                 <li>– Email: tiemhoaconang@gmail.com</li>
               </ul>
@@ -66,7 +82,10 @@ export default function PrivacyPolicy() {
                 5. Phương tiện để người dùng tiếp cận và chỉnh sửa dữ liệu
               </h2>
               <p>
-                Khách hàng có quyền yêu cầu kiểm tra, cập nhật, điều chỉnh hoặc hủy bỏ thông tin cá nhân của mình bằng cách liên hệ với ban quản trị website qua email: tiemhoaconang@gmail.com hoặc hotline: 0902189216.
+                Khách hàng có quyền yêu cầu kiểm tra, cập nhật, điều chỉnh hoặc
+                hủy bỏ thông tin cá nhân của mình bằng cách liên hệ với ban quản
+                trị website qua email: tiemhoaconang@gmail.com hoặc hotline:
+                0902189216.
               </p>
             </div>
 
@@ -77,13 +96,19 @@ export default function PrivacyPolicy() {
               </h2>
               <ul className="space-y-4 ml-4">
                 <li>
-                  – Thông tin cá nhân của khách hàng tại Tiệm hoa Có Nàng được cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân. Việc thu thập và sử dụng thông tin của mỗi khách hàng chỉ được thực hiện khi có sự đồng ý của khách hàng đó.
+                  – Thông tin cá nhân của khách hàng tại Tiệm hoa Có Nàng được
+                  cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá
+                  nhân. Việc thu thập và sử dụng thông tin của mỗi khách hàng
+                  chỉ được thực hiện khi có sự đồng ý của khách hàng đó.
                 </li>
                 <li>
-                  – Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3 nào về thông tin cá nhân của khách hàng khi không có sự cho phép đồng ý từ khách hàng.
+                  – Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho
+                  bên thứ 3 nào về thông tin cá nhân của khách hàng khi không có
+                  sự cho phép đồng ý từ khách hàng.
                 </li>
                 <li>
-                  – Bảo mật tuyệt đối mọi thông tin giao dịch trực tuyến của khách hàng bao gồm thông tin hóa đơn kế toán chứng từ số hóa.
+                  – Bảo mật tuyệt đối mọi thông tin giao dịch trực tuyến của
+                  khách hàng bao gồm thông tin hóa đơn kế toán chứng từ số hóa.
                 </li>
               </ul>
             </div>
@@ -94,7 +119,12 @@ export default function PrivacyPolicy() {
                 7. Cơ chế giải quyết khiếu nại, tranh chấp
               </h2>
               <p>
-                Tiệm hoa Có Nàng có trách nhiệm tiếp nhận và xử lý khiếu nại của khách hàng liên quan đến việc sử dụng thông tin cá nhân. Khi phát hiện thông tin cá nhân bị sử dụng sai mục đích hoặc phạm vi, khách hàng vui lòng gửi email khiếu nại đến tiemhoaconang@gmail.com hoặc gọi điện tới 0902189216 để được giải quyết và xử lý kịp thời.
+                Tiệm hoa Có Nàng có trách nhiệm tiếp nhận và xử lý khiếu nại của
+                khách hàng liên quan đến việc sử dụng thông tin cá nhân. Khi
+                phát hiện thông tin cá nhân bị sử dụng sai mục đích hoặc phạm
+                vi, khách hàng vui lòng gửi email khiếu nại đến
+                tiemhoaconang@gmail.com hoặc gọi điện tới 0902189216 để được
+                giải quyết và xử lý kịp thời.
               </p>
             </div>
           </div>

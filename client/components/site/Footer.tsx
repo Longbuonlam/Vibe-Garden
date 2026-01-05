@@ -124,9 +124,7 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-foreground">
-              LIÊN HỆ
-            </h3>
+            <h3 className="font-bold text-lg mb-6 text-foreground">LIÊN HỆ</h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
