@@ -22,6 +22,7 @@ import ReturnRefundPolicy from "./pages/ReturnRefundPolicy";
 import SellerBuyerObligations from "./pages/SellerBuyerObligations";
 import ShoppingGuide from "./pages/ShoppingGuide";
 import PaymentGuide from "./pages/PaymentGuide";
+import FAQs from "./pages/FAQs";
 import Layout from "./components/site/Layout";
 import RequireAuth from "./auth/RequireAuth";
 import { AuthProvider } from "./auth/AuthContext";
@@ -79,6 +80,7 @@ export default function App() {
                   <Route path="/policy/obligations" element={<SellerBuyerObligations />} />
                   <Route path="/guide/shopping" element={<ShoppingGuide />} />
                   <Route path="/guide/payment" element={<PaymentGuide />} />
+                  <Route path="/faqs" element={<FAQs />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Route>
