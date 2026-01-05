@@ -83,7 +83,7 @@ export default function Footer() {
                   to="/policy/obligations"
                   className="text-foreground hover:text-primary transition-colors"
                 >
-                  Nghĩa vụ bán-khách
+                  Nghĩa vụ của người bán và khách hàng
                 </NavLink>
               </li>
             </ul>
