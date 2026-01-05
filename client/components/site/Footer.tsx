@@ -104,12 +104,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <NavLink
+                  to="/guide/shopping"
                   className="text-foreground hover:text-primary transition-colors"
                 >
                   Hướng dẫn mua hàng
-                </a>
+                </NavLink>
               </li>
               <li>
                 <a
