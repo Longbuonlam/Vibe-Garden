@@ -100,7 +100,7 @@ export default function Footer() {
                   href="#"
                   className="text-foreground hover:text-primary transition-colors"
                 >
-                  Hướng dẫn mua hàng
+                  Câu hỏi thường gặp
                 </a>
               </li>
               <li>
@@ -108,7 +108,7 @@ export default function Footer() {
                   href="#"
                   className="text-foreground hover:text-primary transition-colors"
                 >
-                  Câu hỏi thường gặp
+                  Hướng dẫn mua hàng
                 </a>
               </li>
               <li>
