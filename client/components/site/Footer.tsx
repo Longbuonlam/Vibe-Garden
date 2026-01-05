@@ -138,7 +138,7 @@ export default function Footer() {
                 <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <a
                   href="tel:0902189216"
-                  className="text-foreground hover:text-primary transition-colors"
+                  className="text-foreground hover:text-primary transition-colors text-sm"
                 >
                   0902189216
                 </a>
