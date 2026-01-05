@@ -48,6 +48,23 @@ export default function Index() {
         </div>
       </section>
 
+      {/* General Policies */}
+      <section className="border-y bg-secondary/40">
+        <div className="container py-16 md:py-24">
+          <h3 className="text-2xl font-bold tracking-tight mb-6">
+            CHÍNH SÁCH CHUNG
+          </h3>
+          <ul className="space-y-3 max-w-3xl">
+            <li className="text-foreground">Chính sách thanh toán</li>
+            <li className="text-foreground">Chính sách kiểm hàng</li>
+            <li className="text-foreground">Chính sách bảo mật thông tin cá nhân</li>
+            <li className="text-foreground">Chính sách giao hàng</li>
+            <li className="text-foreground">Chính sách đổi trả và hoàn tiền</li>
+            <li className="text-foreground">Nghĩa vụ của người bán và khách hàng</li>
+          </ul>
+        </div>
+      </section>
+
     </div>
   );
 }
