@@ -55,7 +55,11 @@ export default function Index() {
             CHÍNH SÁCH CHUNG
           </h3>
           <ul className="space-y-3 max-w-3xl">
-            <li className="text-foreground">Chính sách thanh toán</li>
+            <li className="text-foreground">
+              <NavLink to="/policy/payment" className="hover:text-primary transition-colors">
+                Chính sách thanh toán
+              </NavLink>
+            </li>
             <li className="text-foreground">Chính sách kiểm hàng</li>
             <li className="text-foreground">Chính sách bảo mật thông tin cá nhân</li>
             <li className="text-foreground">Chính sách giao hàng</li>
