@@ -31,7 +31,7 @@ export default function Index() {
       </section>
 
       {/* About */}
-      <section className="border-y bg-secondary/40">
+      <section className="border-y bg-white">
         <div className="container py-16 md:py-24 grid items-center gap-8 md:grid-cols-[auto_1fr]">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/70">
             <Flower2 className="h-6 w-6 text-accent-foreground" />
