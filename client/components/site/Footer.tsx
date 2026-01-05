@@ -18,7 +18,15 @@ export default function Footer() {
                   to="/about"
                   className="text-foreground hover:text-primary transition-colors"
                 >
-                  Giới thiệu
+                  Giới thiệu về chúng tôi
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Liên hệ với chúng tôi
                 </NavLink>
               </li>
             </ul>
