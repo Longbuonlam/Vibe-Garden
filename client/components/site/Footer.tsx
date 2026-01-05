@@ -96,12 +96,12 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#"
+                <NavLink
+                  to="/faqs"
                   className="text-foreground hover:text-primary transition-colors"
                 >
                   Câu hỏi thường gặp
-                </a>
+                </NavLink>
               </li>
               <li>
                 <NavLink
