@@ -48,46 +48,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* General Policies */}
-      <section className="border-y bg-secondary/40">
-        <div className="container py-16 md:py-24">
-          <h3 className="text-2xl font-bold tracking-tight mb-6">
-            CHÍNH SÁCH CHUNG
-          </h3>
-          <ul className="space-y-3 max-w-3xl">
-            <li className="text-foreground">
-              <NavLink to="/policy/payment" className="hover:text-primary transition-colors">
-                Chính sách thanh toán
-              </NavLink>
-            </li>
-            <li className="text-foreground">
-              <NavLink to="/policy/inspection" className="hover:text-primary transition-colors">
-                Chính sách kiểm hàng
-              </NavLink>
-            </li>
-            <li className="text-foreground">
-              <NavLink to="/policy/privacy" className="hover:text-primary transition-colors">
-                Chính sách bảo mật thông tin cá nhân
-              </NavLink>
-            </li>
-            <li className="text-foreground">
-              <NavLink to="/policy/delivery" className="hover:text-primary transition-colors">
-                Chính sách giao hàng
-              </NavLink>
-            </li>
-            <li className="text-foreground">
-              <NavLink to="/policy/return-refund" className="hover:text-primary transition-colors">
-                Chính sách đổi trả và hoàn tiền
-              </NavLink>
-            </li>
-            <li className="text-foreground">
-              <NavLink to="/policy/obligations" className="hover:text-primary transition-colors">
-                Nghĩa vụ của người bán và khách hàng
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </section>
 
     </div>
   );
