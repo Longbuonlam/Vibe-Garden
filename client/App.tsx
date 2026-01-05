@@ -15,6 +15,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import ProductDetail from "./pages/ProductDetail";
 import PaymentPolicy from "./pages/PaymentPolicy";
+import InspectionPolicy from "./pages/InspectionPolicy";
 import Layout from "./components/site/Layout";
 import RequireAuth from "./auth/RequireAuth";
 import { AuthProvider } from "./auth/AuthContext";
@@ -65,6 +66,7 @@ export default function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/policy/payment" element={<PaymentPolicy />} />
+                  <Route path="/policy/inspection" element={<InspectionPolicy />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Route>
