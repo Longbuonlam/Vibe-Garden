@@ -43,13 +43,13 @@ export default function PaymentGuide() {
                 <h3 className="font-semibold mb-4 text-foreground">Ngân Hàng Vietcombank:</h3>
                 <ul className="space-y-2 ml-4">
                   <li>
-                    <span className="font-medium">Tài khoản số:</span> 0451000464457
+                    <span className="font-medium">Tài khoản số:</span> 0000000000
                   </li>
                   <li>
                     <span className="font-medium">Chi nhánh:</span> Thành Công – Hà Nội
                   </li>
                   <li>
-                    <span className="font-medium">Chủ tài khoản:</span> Trần Văn Quân
+                    <span className="font-medium">Chủ tài khoản:</span> Nguyễn Văn A
                   </li>
                 </ul>
               </div>
