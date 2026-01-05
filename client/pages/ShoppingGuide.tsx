@@ -16,7 +16,7 @@ export default function ShoppingGuide() {
               </div>
               <div>
                 <h2 className="text-lg font-semibold mb-2">
-                  Chọn loại hoa muốn mua
+                  Chọn sản phẩm
                 </h2>
                 <p>
                   Chọn loại hoa muốn mua, chọn số lượng, nhấn thêm vào giỏ hàng
@@ -31,7 +31,7 @@ export default function ShoppingGuide() {
               </div>
               <div>
                 <h2 className="text-lg font-semibold mb-2">
-                  Xem giỏ hàng
+                  Truy cập giỏ hàng
                 </h2>
                 <p>
                   Nhấn xem giỏ hàng, tiếp tục nhấn chọn Đặt Hàng
