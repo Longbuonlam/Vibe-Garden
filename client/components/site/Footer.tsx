@@ -112,12 +112,12 @@ export default function Footer() {
                 </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
+                <NavLink
+                  to="/guide/payment"
                   className="text-foreground hover:text-primary transition-colors"
                 >
                   Hướng dẫn thanh toán
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
