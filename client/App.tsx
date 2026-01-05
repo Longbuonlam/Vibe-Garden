@@ -18,6 +18,7 @@ import PaymentPolicy from "./pages/PaymentPolicy";
 import InspectionPolicy from "./pages/InspectionPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DeliveryPolicy from "./pages/DeliveryPolicy";
+import ReturnRefundPolicy from "./pages/ReturnRefundPolicy";
 import Layout from "./components/site/Layout";
 import RequireAuth from "./auth/RequireAuth";
 import { AuthProvider } from "./auth/AuthContext";
@@ -71,6 +72,7 @@ export default function App() {
                   <Route path="/policy/inspection" element={<InspectionPolicy />} />
                   <Route path="/policy/privacy" element={<PrivacyPolicy />} />
                   <Route path="/policy/delivery" element={<DeliveryPolicy />} />
+                  <Route path="/policy/return-refund" element={<ReturnRefundPolicy />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Route>
