@@ -60,7 +60,11 @@ export default function Index() {
                 Chính sách thanh toán
               </NavLink>
             </li>
-            <li className="text-foreground">Chính sách kiểm hàng</li>
+            <li className="text-foreground">
+              <NavLink to="/policy/inspection" className="hover:text-primary transition-colors">
+                Chính sách kiểm hàng
+              </NavLink>
+            </li>
             <li className="text-foreground">Chính sách bảo mật thông tin cá nhân</li>
             <li className="text-foreground">Chính sách giao hàng</li>
             <li className="text-foreground">Chính sách đổi trả và hoàn tiền</li>
