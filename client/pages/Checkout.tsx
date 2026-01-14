@@ -11,6 +11,7 @@ export default function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [orderTotal, setOrderTotal] = useState(0);
+  const [paymentMethod, setPaymentMethod] = useState("cod");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
