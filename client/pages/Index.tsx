@@ -6,6 +6,7 @@ import {
   Flower2,
   PackageCheck,
   RotateCcw,
+  Star,
   Truck,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
