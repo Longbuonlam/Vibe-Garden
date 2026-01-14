@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import IntroContact from "@/components/site/IntroContact";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
