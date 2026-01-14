@@ -59,6 +59,60 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Purchase Policy / Trust Badges */}
+      <section className="py-12 md:py-16">
+        <div className="container">
+          <div className="bg-pink-50 rounded-2xl p-8 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
+              Chính sách mua hàng
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {/* Item 1: Quality */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center h-12 w-12 mb-4">
+                  <BadgeCheck className="h-12 w-12 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-1">100%</h3>
+                <p className="text-sm text-muted-foreground">Hàng chất lượng</p>
+              </div>
+
+              {/* Item 2: Exchange/Return */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center h-12 w-12 mb-4">
+                  <RotateCcw className="h-12 w-12 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-1">Hỗ trợ</h3>
+                <p className="text-sm text-muted-foreground">Đổi trả</p>
+              </div>
+
+              {/* Item 3: Fast Delivery */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center h-12 w-12 mb-4">
+                  <Truck className="h-12 w-12 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-1">
+                  Vận chuyển
+                </h3>
+                <p className="text-sm text-muted-foreground">Nhanh chóng</p>
+              </div>
+
+              {/* Item 4: Free Shipping */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center h-12 w-12 mb-4">
+                  <PackageCheck className="h-12 w-12 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-1">
+                  Miễn phí
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Vận chuyển (bán kính 3km)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
