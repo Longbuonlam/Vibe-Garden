@@ -1,7 +1,13 @@
 import Hero from "@/components/site/Hero";
 import ProductCard from "@/components/site/ProductCard";
 import { products as specialProducts } from "@/data/specialProducts";
-import { Flower2 } from "lucide-react";
+import {
+  BadgeCheck,
+  Flower2,
+  PackageCheck,
+  RotateCcw,
+  Truck,
+} from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export default function Index() {
