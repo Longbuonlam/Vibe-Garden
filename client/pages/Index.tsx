@@ -73,7 +73,7 @@ export default function Index() {
                 <div className="flex items-center justify-center h-12 w-12 mb-4">
                   <BadgeCheck className="h-12 w-12 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-1">100%</h3>
+                <h3 className="text-lg font-bold text-foreground mb-1">Chất lượng tốt</h3>
                 <p className="text-sm text-muted-foreground">Hàng chất lượng</p>
               </div>
 
@@ -106,7 +106,7 @@ export default function Index() {
                   Miễn phí
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Vận chuyển (bán kính 3km)
+                  Vận chuyển
                 </p>
               </div>
             </div>
