@@ -56,20 +56,15 @@ export default function PaymentGuide() {
               {/* Bank Account Info */}
               <div className="bg-secondary/20 p-6 rounded-lg mb-6 border border-secondary/40">
                 <h3 className="font-semibold mb-4 text-foreground">
-                  Ngân Hàng Vietcombank:
+                  Ngân Hàng VPBank:
                 </h3>
                 <ul className="space-y-2 ml-4">
                   <li>
                     <span className="font-medium">Tài khoản số:</span>{" "}
-                    0000000000
+                    0902189216
                   </li>
                   <li>
-                    <span className="font-medium">Chi nhánh:</span> Thành Công –
-                    Hà Nội
-                  </li>
-                  <li>
-                    <span className="font-medium">Chủ tài khoản:</span> Nguyễn
-                    Văn A
+                    <span className="font-medium">Chủ tài khoản:</span> DUONG NGOC QUYNH
                   </li>
                 </ul>
               </div>
