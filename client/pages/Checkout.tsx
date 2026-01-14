@@ -307,6 +307,78 @@ export default function Checkout() {
                 <span>{(total).toFixed(3)}đ</span>
               </div>
             </div>
+
+            {/* Payment Methods Section */}
+            <div className="my-6 space-y-4">
+              <h3 className="text-lg font-semibold">Phương thức thanh toán</h3>
+
+              {/* Radio Option 1: COD */}
+              <div className="flex items-start gap-3">
+                <input
+                  type="radio"
+                  id="payment-cod"
+                  name="payment-method"
+                  value="cod"
+                  checked={paymentMethod === "cod"}
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                  className="mt-1 h-4 w-4 cursor-pointer accent-primary"
+                />
+                <label htmlFor="payment-cod" className="flex-1 cursor-pointer">
+                  <span className="block font-bold text-foreground">
+                    Thanh toán khi nhận hàng
+                  </span>
+                </label>
+              </div>
+
+              {/* COD Description Box - Show when COD is selected */}
+              {paymentMethod === "cod" && (
+                <div className="ml-7 bg-gray-100 rounded-md p-3 mt-2">
+                  <p className="text-sm text-gray-600">
+                    Trả tiền mặt khi giao hàng.
+                  </p>
+                </div>
+              )}
+
+              {/* Radio Option 2: Bank Transfer / QR */}
+              <div className="flex items-start gap-3">
+                <input
+                  type="radio"
+                  id="payment-bank"
+                  name="payment-method"
+                  value="bank"
+                  checked={paymentMethod === "bank"}
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                  className="mt-1 h-4 w-4 cursor-pointer accent-primary"
+                />
+                <label htmlFor="payment-bank" className="flex-1 cursor-pointer">
+                  <div className="flex items-center gap-2">
+                    <span className="block font-bold text-foreground">
+                      Chuyển khoản ngân hàng (Quét mã QR)
+                    </span>
+                    <QrCode className="h-4 w-4 text-primary" />
+                  </div>
+                </label>
+              </div>
+
+              {/* QR Code Section - Show when Bank Transfer is selected */}
+              {paymentMethod === "bank" && (
+                <div className="ml-7 border border-pink-200 rounded-lg p-4 mt-3 bg-pink-50">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-32 h-32 bg-gray-200 rounded-md overflow-hidden flex items-center justify-center">
+                      <img
+                        src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                        alt="QR Code"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <p className="text-center text-xs italic text-gray-500">
+                    Vui lòng quét mã để thanh toán. Nội dung chuyển khoản: [Mã
+                    đơn hàng]
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
