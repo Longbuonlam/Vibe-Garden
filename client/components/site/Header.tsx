@@ -36,7 +36,7 @@ export default function Header() {
           <NavLink to="/contact" className={navLinkClasses}>
             Liên hệ
           </NavLink>
-          <NavLink to="/contact" className={navLinkClasses}>
+          <NavLink to="/faqs" className={navLinkClasses}>
             Câu hỏi thường gặp
           </NavLink>
         </nav>
