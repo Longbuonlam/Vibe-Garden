@@ -74,6 +74,7 @@ export default function Index() {
                   <BadgeCheck className="h-12 w-12 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-1">Chất lượng tốt</h3>
+                <p className="text-sm text-muted-foreground"></p>
               </div>
 
               {/* Item 2: Exchange/Return */}
