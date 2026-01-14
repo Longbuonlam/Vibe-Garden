@@ -36,6 +36,9 @@ export default function Header() {
           <NavLink to="/contact" className={navLinkClasses}>
             Liên hệ
           </NavLink>
+          <NavLink to="/contact" className={navLinkClasses}>
+            Câu hỏi thường gặp
+          </NavLink>
         </nav>
 
         <div className="flex items-center gap-3">
