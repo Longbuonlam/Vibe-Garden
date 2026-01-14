@@ -368,9 +368,9 @@ export default function Checkout() {
               {paymentMethod === "bank" && (
                 <div className="ml-7 border border-pink-200 rounded-lg p-4 mt-3 bg-pink-50">
                   <div className="flex justify-center mb-4">
-                    <div className="w-32 h-32 bg-gray-200 rounded-md overflow-hidden flex items-center justify-center">
+                    <div className="w-43 h-43 bg-gray-200 rounded-md overflow-hidden flex items-center justify-center">
                       <img
-                        src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                        src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1768396805/QR_rriqey.jpg"
                         alt="QR Code"
                         className="w-full h-full object-cover"
                       />

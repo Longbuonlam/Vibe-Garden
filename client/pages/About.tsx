@@ -9,7 +9,7 @@ export default function About() {
             <div className="flex justify-center">
               <div className="w-full max-w-sm aspect-square rounded-2xl overflow-hidden bg-pink-100 flex items-center justify-center">
                 <img
-                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1768396544/logo_rbnnvz.jpg"
                   alt="Tiệm hoa Có Nàng signature bouquet"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -43,17 +43,10 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left: Images */}
             <div className="flex flex-col gap-6 relative">
-              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72">
+              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-82">
                 <img
-                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1768396804/image1_uuokj1.jpg"
                   alt="Fresh flowers from garden"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-              </div>
-              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72 md:ml-8">
-                <img
-                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
-                  alt="Happy customer with flowers"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
@@ -155,17 +148,10 @@ export default function About() {
 
             {/* Right: Images */}
             <div className="flex flex-col gap-6 relative">
-              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72">
+              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-82">
                 <img
-                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1768396805/image2_y45f3h.jpg"
                   alt="Fresh petals and quality flowers"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-              </div>
-              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72 md:mr-8">
-                <img
-                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
-                  alt="Eco-friendly packaging and sustainability"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>

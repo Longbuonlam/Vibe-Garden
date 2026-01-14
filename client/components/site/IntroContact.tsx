@@ -29,7 +29,7 @@ export default function IntroContact() {
           <div className="flex justify-center">
             <div className="w-full rounded-xl overflow-hidden shadow-lg">
               <img
-                src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1768396810/image3_b72mx9.jpg"
                 alt="Tiệm hoa Có Nàng flower arrangement"
                 className="w-full h-full object-cover"
               />
