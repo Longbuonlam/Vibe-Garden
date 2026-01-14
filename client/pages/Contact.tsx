@@ -35,16 +35,16 @@ export default function Contact() {
     setIsSubmitting(true);
     let success = false;
     try {
-      const resp = await fetch('https://vibe-garden.onrender.com/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const resp = await fetch("https://vibe-garden.onrender.com/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const data = await resp.json().catch(() => null);
 
       if (!resp.ok || !data || data.success === false) {
-        const msg = data?.error || data?.message || 'Failed to send message';
+        const msg = data?.error || data?.message || "Failed to send message";
         throw new Error(msg);
       }
 
@@ -52,7 +52,7 @@ export default function Contact() {
       toast.success("Message sent! We'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      const message = (err as any)?.message || 'Failed to send message';
+      const message = (err as any)?.message || "Failed to send message";
       toast.error(message);
     } finally {
       // only reset submitting flag if submission failed; otherwise keep as false to allow next sends
@@ -212,10 +212,7 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <a
-                  href="mailto:tiemhoaconang@gmail.com"
-                  className="group"
-                >
+                <a href="mailto:tiemhoaconang@gmail.com" className="group">
                   <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
                     <Mail className="h-6 w-6 text-foreground" />
                     <div className="flex flex-col">
@@ -226,10 +223,7 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <a
-                  href="tel:0902189216"
-                  className="group"
-                >
+                <a href="tel:0902189216" className="group">
                   <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors cursor-pointer">
                     <Phone className="h-6 w-6 text-foreground" />
                     <div className="flex flex-col">

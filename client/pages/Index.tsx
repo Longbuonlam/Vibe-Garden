@@ -83,7 +83,9 @@ export default function Index() {
                 <div className="flex items-center justify-center h-12 w-12 mb-4">
                   <RotateCcw className="h-12 w-12 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-1">Hỗ trợ</h3>
+                <h3 className="text-lg font-bold text-foreground mb-1">
+                  Hỗ trợ
+                </h3>
                 <p className="text-sm text-muted-foreground">Đổi trả</p>
               </div>
 
@@ -106,9 +108,7 @@ export default function Index() {
                 <h3 className="text-lg font-bold text-foreground mb-1">
                   Miễn phí
                 </h3>
-                <p className="text-sm text-muted-foreground">
-                  Vận chuyển
-                </p>
+                <p className="text-sm text-muted-foreground">Vận chuyển</p>
               </div>
             </div>
           </div>
@@ -124,29 +124,29 @@ export default function Index() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <p className="text-foreground leading-relaxed">
-                Tiệm hoa Có Nàng cam kết từng nhành hoa đều được tuyển chọn
-                khắt khe từ những nhà vườn uy tín, đảm bảo độ tươi mới đạt
-                chuẩn. Chúng tôi mang đến cho bạn những đóa hoa "tuyển chọn"
-                chính hiệu, giữ trọn màu sắc rạng rỡ và hương thơm tự nhiên,
-                giúp lan tỏa năng lượng tích cực đến không gian sống của bạn.
+                Tiệm hoa Có Nàng cam kết từng nhành hoa đều được tuyển chọn khắt
+                khe từ những nhà vườn uy tín, đảm bảo độ tươi mới đạt chuẩn.
+                Chúng tôi mang đến cho bạn những đóa hoa "tuyển chọn" chính
+                hiệu, giữ trọn màu sắc rạng rỡ và hương thơm tự nhiên, giúp lan
+                tỏa năng lượng tích cực đến không gian sống của bạn.
               </p>
 
               <p className="text-foreground leading-relaxed">
                 Chúng tôi đặt trải nghiệm cảm xúc của khách hàng lên hàng đầu
                 với tiêu chuẩn "3 KHÔNG": không sử dụng hoa cũ/héo, không dùng
-                chất bảo quản hóa học gây hại và không rập khuôn mẫu mã đại
-                trà. Mọi sản phẩm đều được kiểm soát nghiêm ngặt từ khâu xử lý
-                gốc tại tiệm đến khi đóng gói để đảm bảo mỗi bó hoa khi đến tay
-                bạn đều hoàn mỹ và bền lâu nhất.
+                chất bảo quản hóa học gây hại và không rập khuôn mẫu mã đại trà.
+                Mọi sản phẩm đều được kiểm soát nghiêm ngặt từ khâu xử lý gốc
+                tại tiệm đến khi đóng gói để đảm bảo mỗi bó hoa khi đến tay bạn
+                đều hoàn mỹ và bền lâu nhất.
               </p>
 
               <p className="text-foreground leading-relaxed">
                 Sử dụng phong cách thiết kế hiện đại, tối giản nhưng đậm chất
-                nghệ thuật, Tiệm hoa Có Nàng giúp mỗi sản phẩm trở thành một
-                lời nhắn gửi tinh tế. Quy trình phối màu và chọn giấy gói được
-                thực hiện thủ công chuyên nghiệp, không chỉ tôn lên vẻ đẹp
-                nguyên bản của hoa mà còn thể hiện được gu thẩm mỹ độc bản và
-                cá tính riêng biệt của người tặng.
+                nghệ thuật, Tiệm hoa Có Nàng giúp mỗi sản phẩm trở thành một lời
+                nhắn gửi tinh tế. Quy trình phối màu và chọn giấy gói được thực
+                hiện thủ công chuyên nghiệp, không chỉ tôn lên vẻ đẹp nguyên bản
+                của hoa mà còn thể hiện được gu thẩm mỹ độc bản và cá tính riêng
+                biệt của người tặng.
               </p>
 
               <p className="text-foreground leading-relaxed">
@@ -187,14 +187,14 @@ export default function Index() {
                   ))}
                 </div>
                 <p className="text-foreground text-center leading-relaxed mb-6">
-                  "Mình vừa đặt một bó hoa thiết kế tại Tiệm hoa Có Nàng để
-                  tặng sinh nhật bạn thân và thực sự rất hài lòng. Điều mình
-                  ấn tượng nhất là phong cách gói hoa cực kỳ hiện đại,
-                  'aesthetic' và lên ảnh rất xinh, khác hẳn với những kiểu bó
-                  hoa đại trà ngoài chợ. Shop còn rất tinh tế khi chuẩn bị kèm
-                  một tấm thiệp viết tay theo nội dung mình yêu cầu, nét chữ
-                  rất đẹp và ấm áp. Bạn mình nhận được hoa khen mãi không thôi.
-                  Chắc chắn mình sẽ ủng hộ Tiệm lâu dài cho các dịp sau!"
+                  "Mình vừa đặt một bó hoa thiết kế tại Tiệm hoa Có Nàng để tặng
+                  sinh nhật bạn thân và thực sự rất hài lòng. Điều mình ấn tượng
+                  nhất là phong cách gói hoa cực kỳ hiện đại, 'aesthetic' và lên
+                  ảnh rất xinh, khác hẳn với những kiểu bó hoa đại trà ngoài
+                  chợ. Shop còn rất tinh tế khi chuẩn bị kèm một tấm thiệp viết
+                  tay theo nội dung mình yêu cầu, nét chữ rất đẹp và ấm áp. Bạn
+                  mình nhận được hoa khen mãi không thôi. Chắc chắn mình sẽ ủng
+                  hộ Tiệm lâu dài cho các dịp sau!"
                 </p>
                 <p className="text-center font-bold text-foreground text-sm">
                   - Khách hàng thân thiết
@@ -219,9 +219,9 @@ export default function Index() {
                   để ở bàn làm việc mà sang ngày thứ 5 vẫn còn rạng rỡ và thơm
                   nhẹ. Với mức giá cực kỳ 'hạt dẻ' phù hợp với túi tiền sinh
                   viên và dân văn phòng mà chất lượng lại vượt mong đợi như thế
-                  này thì thực sự rất hiếm. Dịch vụ giao hàng cũng rất đúng
-                  giờ, hoa được bọc chống sốc kỹ nên lúc nhận không bị dập một
-                  cánh nào."
+                  này thì thực sự rất hiếm. Dịch vụ giao hàng cũng rất đúng giờ,
+                  hoa được bọc chống sốc kỹ nên lúc nhận không bị dập một cánh
+                  nào."
                 </p>
                 <p className="text-center font-bold text-foreground text-sm">
                   - Khách hàng thân thiết

@@ -87,8 +87,8 @@ export default function About() {
                   <p className="text-foreground leading-relaxed">
                     Đặt cảm xúc và sự hài lòng của khách hàng làm trung tâm.
                     Chúng tôi nỗ lực cung cấp dịch vụ giao hoa hỏa tốc, chỉn chu
-                    trong từng khâu đóng gói và hỗ trợ nhiệt thành để mỗi món quà
-                    trao đi đều mang trọn vẹn tâm tình người tặng.
+                    trong từng khâu đóng gói và hỗ trợ nhiệt thành để mỗi món
+                    quà trao đi đều mang trọn vẹn tâm tình người tặng.
                   </p>
                 </div>
 
@@ -144,10 +144,10 @@ export default function About() {
                   <p className="text-foreground leading-relaxed">
                     Chúng tôi làm việc trực tiếp với các nhà vườn uy tín, ưu
                     tiên những nguồn cung tuân thủ quy trình canh tác bền vững,
-                    thân thiện với môi trường. Bên cạnh đó, "Có Nàng" cam kết
-                    sử dụng các vật liệu bao bì dễ tái chế, góp phần giảm thiểu
-                    rác thải nhựa. Lựa chọn chúng tôi là bạn đang ủng hộ một mô
-                    hình kinh doanh tử tế và có trách nhiệm với hệ sinh thái.
+                    thân thiện với môi trường. Bên cạnh đó, "Có Nàng" cam kết sử
+                    dụng các vật liệu bao bì dễ tái chế, góp phần giảm thiểu rác
+                    thải nhựa. Lựa chọn chúng tôi là bạn đang ủng hộ một mô hình
+                    kinh doanh tử tế và có trách nhiệm với hệ sinh thái.
                   </p>
                 </div>
               </div>

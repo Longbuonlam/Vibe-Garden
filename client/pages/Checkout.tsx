@@ -44,7 +44,9 @@ export default function Checkout() {
             <CheckCircle className="h-16 w-16 text-green-600" />
           </div>
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">Đơn hàng đã được đặt!</h1>
+            <h1 className="text-3xl font-bold tracking-tight">
+              Đơn hàng đã được đặt!
+            </h1>
             <p className="text-lg text-muted-foreground">
               Hoa đẹp của bạn đang trên đường đến!
             </p>
@@ -58,9 +60,7 @@ export default function Checkout() {
             </div>
             <div>
               <p className="text-muted-foreground">Tổng số tiền:</p>
-              <p className="font-semibold text-lg">
-                {orderTotal.toFixed(3)}đ
-              </p>
+              <p className="font-semibold text-lg">{orderTotal.toFixed(3)}đ</p>
             </div>
             <div>
               <p className="text-muted-foreground">Thời gian giao hàng:</p>
@@ -130,25 +130,29 @@ export default function Checkout() {
         total: finalTotal,
       };
 
-      const resp = await fetch('https://vibe-garden.onrender.com/api/place-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+      const resp = await fetch(
+        "https://vibe-garden.onrender.com/api/place-order",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        },
+      );
 
       const data = await resp.json().catch(() => null);
 
       if (!resp.ok || !data || data.success === false) {
-        const msg = data?.error || data?.message || 'Failed to place order';
+        const msg = data?.error || data?.message || "Failed to place order";
         throw new Error(msg);
       }
 
-      toast.success('Order placed successfully!');
+      toast.success("Order placed successfully!");
       setOrderTotal(finalTotal);
       clearCart();
       setOrderPlaced(true);
     } catch (error) {
-      const message = (error as any)?.message || 'Payment failed. Please try again.';
+      const message =
+        (error as any)?.message || "Payment failed. Please try again.";
       toast.error(message);
     } finally {
       setIsProcessing(false);
@@ -304,7 +308,7 @@ export default function Checkout() {
             <div className="border-t border-border pt-4">
               <div className="flex justify-between text-lg font-bold">
                 <span>Tổng tiền:</span>
-                <span>{(total).toFixed(3)}đ</span>
+                <span>{total.toFixed(3)}đ</span>
               </div>
             </div>
 
