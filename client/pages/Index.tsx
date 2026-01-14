@@ -161,6 +161,103 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Customer Reviews */}
+      <section className="py-12 md:py-16">
+        <div className="container">
+          <div className="bg-gradient-to-b from-pink-50 to-pink-100 rounded-2xl p-8 md:p-12">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-center text-foreground mb-6">
+                Đánh giá của khách hàng
+              </h2>
+              <div className="flex justify-center">
+                <Flower2 className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Review Card 1 */}
+              <div className="bg-white shadow-lg rounded-xl p-8">
+                <div className="flex justify-center gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+                <p className="text-foreground text-center leading-relaxed mb-6">
+                  "Mình vừa đặt một bó hoa thiết kế tại Tiệm hoa Có Nàng để
+                  tặng sinh nhật bạn thân và thực sự rất hài lòng. Điều mình
+                  ấn tượng nhất là phong cách gói hoa cực kỳ hiện đại,
+                  'aesthetic' và lên ảnh rất xinh, khác hẳn với những kiểu bó
+                  hoa đại trà ngoài chợ. Shop còn rất tinh tế khi chuẩn bị kèm
+                  một tấm thiệp viết tay theo nội dung mình yêu cầu, nét chữ
+                  rất đẹp và ấm áp. Bạn mình nhận được hoa khen mãi không thôi.
+                  Chắc chắn mình sẽ ủng hộ Tiệm lâu dài cho các dịp sau!"
+                </p>
+                <p className="text-center font-bold text-foreground text-sm">
+                  - Khách hàng thân thiết
+                </p>
+              </div>
+
+              {/* Review Card 2 */}
+              <div className="bg-white shadow-lg rounded-xl p-8">
+                <div className="flex justify-center gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+                <p className="text-foreground text-center leading-relaxed mb-6">
+                  "Là một người có thói quen mua hoa thả bình mỗi tuần, mình đã
+                  trải nghiệm qua nhiều tiệm nhưng Tiệm hoa Có Nàng khiến mình
+                  bất ngờ nhất. Dòng hoa thả bình của Tiệm được sơ chế cực kỳ
+                  sạch sẽ, về chỉ việc cắm vào bình là xong. Hoa rất tươi, mình
+                  để ở bàn làm việc mà sang ngày thứ 5 vẫn còn rạng rỡ và thơm
+                  nhẹ. Với mức giá cực kỳ 'hạt dẻ' phù hợp với túi tiền sinh
+                  viên và dân văn phòng mà chất lượng lại vượt mong đợi như thế
+                  này thì thực sự rất hiếm. Dịch vụ giao hàng cũng rất đúng
+                  giờ, hoa được bọc chống sốc kỹ nên lúc nhận không bị dập một
+                  cánh nào."
+                </p>
+                <p className="text-center font-bold text-foreground text-sm">
+                  - Khách hàng thân thiết
+                </p>
+              </div>
+
+              {/* Review Card 3 */}
+              <div className="bg-white shadow-lg rounded-xl p-8">
+                <div className="flex justify-center gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+                <p className="text-foreground text-center leading-relaxed mb-6">
+                  "Mình là người khá bận rộn nên rất ưu tiên việc đặt hàng
+                  online nhanh chóng. Giao diện Website của Tiệm hoa Có Nàng
+                  thực sự làm mình ấn tượng vì rất mượt, ảnh sản phẩm rõ nét và
+                  quy trình thanh toán cực đơn giản. Lúc đầu cũng hơi lo vì mua
+                  hoa online sợ hình một đằng hoa một nẻo, nhưng khi nhận hàng
+                  thì bó hoa 'Đồng tiền' mình đặt còn đẹp hơn cả trong ảnh. Shop
+                  đóng gói rất chắc chắn, có túi nước giữ ẩm ở gốc nên hoa đến
+                  nơi vẫn tươi rói dù thời tiết Hà Nội đang khá nóng. Một điểm
+                  cộng lớn cho sự chuyên nghiệp của các bạn sinh viên khởi
+                  nghiệp!"
+                </p>
+                <p className="text-center font-bold text-foreground text-sm">
+                  - Khách hàng thân thiết
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
