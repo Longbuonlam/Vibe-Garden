@@ -113,6 +113,53 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us */}
+      <section className="py-12 md:py-16">
+        <div className="container">
+          <div className="bg-pink-50 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10">
+              Tại sao nên chọn chúng tôi
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              <p className="text-foreground leading-relaxed">
+                Tiệm hoa Có Nàng cam kết từng nhành hoa đều được tuyển chọn
+                khắt khe từ những nhà vườn uy tín, đảm bảo độ tươi mới đạt
+                chuẩn. Chúng tôi mang đến cho bạn những đóa hoa "tuyển chọn"
+                chính hiệu, giữ trọn màu sắc rạng rỡ và hương thơm tự nhiên,
+                giúp lan tỏa năng lượng tích cực đến không gian sống của bạn.
+              </p>
+
+              <p className="text-foreground leading-relaxed">
+                Chúng tôi đặt trải nghiệm cảm xúc của khách hàng lên hàng đầu
+                với tiêu chuẩn "3 KHÔNG": không sử dụng hoa cũ/héo, không dùng
+                chất bảo quản hóa học gây hại và không rập khuôn mẫu mã đại
+                trà. Mọi sản phẩm đều được kiểm soát nghiêm ngặt từ khâu xử lý
+                gốc tại tiệm đến khi đóng gói để đảm bảo mỗi bó hoa khi đến tay
+                bạn đều hoàn mỹ và bền lâu nhất.
+              </p>
+
+              <p className="text-foreground leading-relaxed">
+                Sử dụng phong cách thiết kế hiện đại, tối giản nhưng đậm chất
+                nghệ thuật, Tiệm hoa Có Nàng giúp mỗi sản phẩm trở thành một
+                lời nhắn gửi tinh tế. Quy trình phối màu và chọn giấy gói được
+                thực hiện thủ công chuyên nghiệp, không chỉ tôn lên vẻ đẹp
+                nguyên bản của hoa mà còn thể hiện được gu thẩm mỹ độc bản và
+                cá tính riêng biệt của người tặng.
+              </p>
+
+              <p className="text-foreground leading-relaxed">
+                Chúng tôi hỗ trợ giao hàng siêu tốc tận cửa và đảm bảo đúng
+                khung giờ "vàng" để món quà của bạn luôn là một bất ngờ trọn
+                vẹn. Có Nàng sẵn sàng hỗ trợ đổi trả 1-1 hoặc điều chỉnh ngay
+                lập tức nếu sản phẩm không đúng cam kết hoặc hư hỏng trong quá
+                trình vận chuyển, mang lại sự an tâm và hài lòng tuyệt đối khi
+                mua sắm tại tiệm.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
