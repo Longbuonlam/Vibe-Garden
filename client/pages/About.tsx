@@ -1,59 +1,175 @@
 export default function About() {
   return (
-    <div className="bg-background">
-      {/* Section 1: Page Header Strip */}
-      <div className="w-full bg-[#F5F5F5]">
-        <div className="container py-6 text-center">
-          <h1 className="text-lg md:text-xl font-bold text-foreground uppercase">
-            VỀ TIỆM HOA CÓ NÀNG
-          </h1>
-        </div>
-      </div>
+    <div className="bg-white">
+      {/* Section 1: Intro (Image Left - Text Right) */}
+      <section className="py-20 md:py-32">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left: Image */}
+            <div className="flex justify-center">
+              <div className="w-full max-w-sm aspect-square rounded-2xl overflow-hidden bg-pink-100 flex items-center justify-center">
+                <img
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  alt="Tiệm hoa Có Nàng signature bouquet"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
 
-      {/* Section 2: Brand Introduction */}
-      <section className="container py-12 md:py-16">
-        <div className="w-full mx-auto text-left space-y-6">
-          <p className="text-base md:text-lg">
-            <span className="font-semibold italic">Tiệm hoa Có Nàng</span>{' '}
-            là nơi lưu giữ những khoảnh khắc dịu dàng, nơi mỗi bó hoa được chọn lọc và chăm chút để kể một câu chuyện riêng.
-          </p>
-
-          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Tiệm hoa Có Nàng là một tiệm hoa online được tạo nên từ tình yêu dành cho cái đẹp và những khoảnh khắc dịu dàng trong đời sống. Chúng tôi chọn lựa những đóa hoa tươi theo mùa, kết hợp với phong cách thiết kế tối giản – tinh tế, để mỗi sản phẩm không chỉ là một bó hoa, mà là một cảm xúc được gửi gắm.
-          </p>
+            {/* Right: Text */}
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
+                Về chúng tôi
+              </h1>
+              <p className="text-lg text-foreground leading-relaxed mb-6">
+                Tiệm Hoa Có Nàng – một tiệm hoa thương mại điện tử được thành
+                lập với sứ mệnh đơn giản: Mang những đóa hoa tươi rạng rỡ và
+                tinh khôi nhất từ vườn ươm đến trực tiếp không gian sống và tâm
+                hồn của mỗi khách hàng.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                Tiệm Hoa Có Nàng không chỉ bán hoa; chúng tôi trao gửi những
+                thông điệp yêu thương chân thành và liệu pháp 'chữa lành' nhẹ
+                nhàng vào từng nhành hoa trao tay.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Section 3: Hero Banner (Visual Break) */}
-      <div className="w-full">
+      {/* Section 2: Core Values (Images Left - Text Right) */}
+      <section className="py-20 md:py-32 bg-pink-50">
         <div className="container">
-          <img
-            src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
-            alt="Banner flowers"
-            className="w-full h-[220px] md:h-[320px] object-cover rounded-md"
-          />
-        </div>
-      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left: Images */}
+            <div className="flex flex-col gap-6 relative">
+              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72">
+                <img
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  alt="Fresh flowers from garden"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72 md:ml-8">
+                <img
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  alt="Happy customer with flowers"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
 
-      {/* Section 4: Detailed Columns (stacked vertically) */}
-      <section className="container py-12 md:py-16">
-        <div className="w-full mx-auto space-y-10 text-left">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#C08A92' }}>
-              CÂU CHUYỆN KHỞI NGUỒN
-            </h2>
-            <p className="mt-4 text-sm md:text-base leading-relaxed">
-              Tiệm hoa Có Nàng được tạo nên từ niềm đam mê và tình yêu dành cho cái đẹp. Chúng tôi tin rằng sự tối giản và tinh tế trong thiết kế giúp tôn vinh vẻ đẹp tự nhiên của hoa, cùng với sự chăm chút trong từng chi tiết để mang đến sản phẩm độc đáo và đầy cảm xúc.
-            </p>
+            {/* Right: Text */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+                Giá trị cốt lõi
+              </h2>
+
+              <div className="space-y-10">
+                {/* Value 1 */}
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    Tươi Mới Từ Vườn Ươm
+                  </h3>
+                  <p className="text-foreground leading-relaxed">
+                    Mọi đóa hoa đều được tuyển chọn kỹ lưỡng từ các nhà vườn uy
+                    tín, đảm bảo độ tươi rạng rỡ và sức sống bền bỉ nhất. Chúng
+                    tôi xây dựng niềm tin bằng cam kết về chất lượng hoa loại 1,
+                    được nhập mới và sơ chế cẩn thận mỗi ngày.
+                  </p>
+                </div>
+
+                {/* Value 2 */}
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    Tận Tâm Trong Từng Thông Điệp
+                  </h3>
+                  <p className="text-foreground leading-relaxed">
+                    Đặt cảm xúc và sự hài lòng của khách hàng làm trung tâm.
+                    Chúng tôi nỗ lực cung cấp dịch vụ giao hoa hỏa tốc, chỉn chu
+                    trong từng khâu đóng gói và hỗ trợ nhiệt thành để mỗi món quà
+                    trao đi đều mang trọn vẹn tâm tình người tặng.
+                  </p>
+                </div>
+
+                {/* Value 3 */}
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    Thẩm Mỹ Và Tinh Tế
+                  </h3>
+                  <p className="text-foreground leading-relaxed">
+                    Chúng tôi cam kết mang đến những mẫu hoa được thiết kế độc
+                    bản, bắt kịp xu hướng hiện đại và tối giản. Mỗi sản phẩm là
+                    sự kết hợp hài hòa giữa nghệ thuật sắp đặt và màu sắc, đảm
+                    bảo mang lại trải nghiệm thẩm mỹ tuyệt vời nhất cho không
+                    gian của bạn.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#C08A92' }}>
-              SỨ MỆNH CỦA CHÚNG TÔI
-            </h2>
-            <p className="mt-4 text-sm md:text-base leading-relaxed">
-              Sứ mệnh của chúng tôi là mang đến những kết nối ấm áp giữa con người qua sắc hoa và hương hoa. Mỗi bó hoa là một thông điệp, và chúng tôi hy vọng giúp bạn gửi gắm những cảm xúc chân thành tới người thân yêu.
-            </p>
+      {/* Section 3: Commitment (Text Left - Images Right) */}
+      <section className="py-20 md:py-32 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left: Text */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+                Cam kết
+              </h2>
+
+              <div className="space-y-10">
+                {/* Commitment 1 */}
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    Chất Lượng Tươi Mới Là Ưu Tiên
+                  </h3>
+                  <p className="text-foreground leading-relaxed">
+                    Chúng tôi cam kết 100% hoa được tuyển chọn mới mỗi ngày,
+                    KHÔNG sử dụng các hóa chất bảo quản độc hại gây ảnh hưởng
+                    đến sức khỏe người dùng. Đảm bảo mỗi bó hoa khi trao tay bạn
+                    luôn giữ được vẻ đẹp rạng rỡ, hương thơm tự nhiên và độ bền
+                    tốt nhất.
+                  </p>
+                </div>
+
+                {/* Commitment 2 */}
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    Nguồn Gốc & Trách Nhiệm Cộng Đồng
+                  </h3>
+                  <p className="text-foreground leading-relaxed">
+                    Chúng tôi làm việc trực tiếp với các nhà vườn uy tín, ưu
+                    tiên những nguồn cung tuân thủ quy trình canh tác bền vững,
+                    thân thiện với môi trường. Bên cạnh đó, "Có Nàng" cam kết
+                    sử dụng các vật liệu bao bì dễ tái chế, góp phần giảm thiểu
+                    rác thải nhựa. Lựa chọn chúng tôi là bạn đang ủng hộ một mô
+                    hình kinh doanh tử tế và có trách nhiệm với hệ sinh thái.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Images */}
+            <div className="flex flex-col gap-6 relative">
+              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72">
+                <img
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  alt="Fresh petals and quality flowers"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+              <div className="w-full rounded-2xl overflow-hidden bg-gray-200 h-72 md:mr-8">
+                <img
+                  src="https://res.cloudinary.com/djoyvs0e3/image/upload/v1763996942/04cab5b8-acff-40c4-a05e-7dc31a327097_th6hdi.jpg"
+                  alt="Eco-friendly packaging and sustainability"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
